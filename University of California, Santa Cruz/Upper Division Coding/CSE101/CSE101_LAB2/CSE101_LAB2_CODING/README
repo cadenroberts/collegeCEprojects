@@ -1,0 +1,23 @@
+Makefile:
+The Makefile to make my code executable.
+
+NQueens.cpp:
+My solution to the N queens problem as described in hw_nqueens.pdf.
+
+simple-input.txt:
+A simple test input file.
+
+simple-output.txt:
+The output expected from simple-input.txt.
+
+test-output.txt:
+The output from running the ./checkcode.sh autograder.
+
+README:
+The file you are currently reading.
+
+Tests/:
+Folder containing more inputs and outputs to test against.
+
+Helper/:
+Folder containing java code to help print your solution

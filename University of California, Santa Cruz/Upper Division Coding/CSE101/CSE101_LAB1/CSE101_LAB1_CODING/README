@@ -1,0 +1,31 @@
+Hw1: README
+
+hw_shakespeare.pdf:
+The pdf containing guidelines to the solution I have implemented.
+
+Makefile:
+make compiles my code into an executable 'bard'. make clean will remove all executable files.
+
+shakespeare-cleaned5.txt:
+The text file we read and sort (hardcoded) according to the guidlines.
+
+shakespeareQuery.cpp:
+My .cpp file which contains the necessary definitions and logic to solve the problem outlined
+in hw_shakespeare.pdf.
+
+simple-input.txt:
+A simple test of 6 inputs.
+
+simple-output.txt:
+The expected output of simple-input.txt.
+
+testit.sh:
+A bash script I wrote to test the simple and more input files.
+
+/Tests:
+Contains more-input.txt and more-output.txt, which test for lexographic and nonexistent
+functionality. Also contains simple-input.txt, simple-output.txt, and shakespeare-cleaned5.txt
+incase of corruption of the original files in /Bard.
+
+README:
+The project description file you are currently reading.
