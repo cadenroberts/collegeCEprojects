@@ -1,0 +1,133 @@
+[1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: ___'_ __ __ _____-______
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: ___'t __ __ ___t_-______
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: ___'t __ __ ___t_-h_____
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: ___'t __ __ e__t_-h___e_
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+(_)    |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: ___'t __ __ e__t_-h___e_
+Eliminated: q
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+(_)    |
+ |     |
+ |     |\
+       | \
+     __|__\
+
+
+    Phrase: ___'t __ __ e__t_-h___e_
+Eliminated: qu
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+(_)    |
+ |     |
+ |     |\
+       | \
+     __|__\
+
+
+    Phrase: ___'t __ i_ e__t_-h___e_
+Eliminated: qu
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+(_)    |
+/|     |
+ |     |\
+       | \
+     __|__\
+
+
+    Phrase: ___'t __ i_ e__t_-h___e_
+Eliminated: cqu
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+(_)    |
+/|\    |
+ |     |\
+       | \
+     __|__\
+
+
+    Phrase: ___'t __ i_ e__t_-h___e_
+Eliminated: ckqu
+
+Guess a letter: Guess a letter: [1;1H[2J  _____
+ |     |
+(_)    |
+/|\    |
+ |     |\
+/      | \
+     __|__\
+
+
+    Phrase: ___'t __ i_ e__t_-h___e_
+Eliminated: bckqu
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+(_)    |
+/|\    |
+ |     |\
+/ \    | \
+     __|__\
+
+
+    Phrase: ___'t __ i_ e__t_-h___e_
+Eliminated: bckqru
+
+You lose! The secret phrase was: don't go in empty-handed

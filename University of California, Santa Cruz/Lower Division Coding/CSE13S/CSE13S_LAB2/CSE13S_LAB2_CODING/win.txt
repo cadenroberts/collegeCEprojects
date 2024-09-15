@@ -1,0 +1,325 @@
+[1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: __________________________
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: ______t___________________
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: ______t___________h_______
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: ______t___________h__e____
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: ______t__q________h__e____
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: _____ut__q________h__e____
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: _____ut__q_______ih__e____
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: _____ut__q_______ih__e_c__
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: _____ut__q_____k_ih__e_c__
+Eliminated: 
+
+Guess a letter: Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: _____ut__q_____k_ih__e_cb_
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: _____ut_rq_____k_ih__e_cb_
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: _____ut_rq_o___k_ih__e_cb_
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: ___w_ut_rq_o___k_ih__e_cb_
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: ___w_ut_rq_on__k_ih__e_cb_
+Eliminated: 
+
+Guess a letter: Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: ___w_ut_rq_on__k_ih_fe_cb_
+Eliminated: 
+
+Guess a letter: Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: __xw_ut_rq_on__k_ih_fe_cb_
+Eliminated: 
+
+Guess a letter: Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: __xw_ut_rq_on__kjih_fe_cb_
+Eliminated: 
+
+Guess a letter: Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: __xw_ut_rq_onm_kjih_fe_cb_
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: __xw_ut_rqponm_kjih_fe_cb_
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: __xw_utsrqponm_kjih_fe_cb_
+Eliminated: 
+
+Guess a letter: Guess a letter: Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: __xwvutsrqponm_kjih_fe_cb_
+Eliminated: 
+
+Guess a letter: Guess a letter: Guess a letter: Guess a letter: Guess a letter: Guess a letter: Guess a letter: Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: __xwvutsrqponmlkjih_fe_cb_
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: __xwvutsrqponmlkjih_fe_cba
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: z_xwvutsrqponmlkjih_fe_cba
+Eliminated: 
+
+Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: zyxwvutsrqponmlkjih_fe_cba
+Eliminated: 
+
+Guess a letter: Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: zyxwvutsrqponmlkjih_fedcba
+Eliminated: 
+
+Guess a letter: Guess a letter: [1;1H[2J  _____
+ |     |
+       |
+       |
+       |\
+       | \
+     __|__\
+
+
+    Phrase: zyxwvutsrqponmlkjihgfedcba
+Eliminated: 
+
+You win! The secret phrase was: zyxwvutsrqponmlkjihgfedcba
