@@ -1,0 +1,129 @@
+openapi: '3.0.3'
+info:
+  description: CSE186 Assignment 7 Backend
+  version: 0.1.0
+  title: CSE186 Assignment 7 Backend
+
+servers:
+  - url: http://localhost:3010/v0
+
+paths:
+  /mailbox:
+    get:
+      description: Returns all EMail
+      responses:
+        200:
+          description: All mailboxes as an array of strings sorted alphabetically
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /mail:
+    get:
+      description: Get all emails in a mailbox
+      parameters:
+        - name: mailbox
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Emails in the specified mailbox
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      format: uuid
+                    to:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        email:
+                          type: string
+                          format: email
+                    from:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        email:
+                          type: string
+                          format: email
+                    received:
+                      type: string
+                      format: date-time
+                    sent:
+                      type: string
+                      format: date-time
+                    subject:
+                      type: string
+
+        404:
+          description: Mailbox not found
+
+  /mail/{id}:
+    put:
+      description: Move an email to a different mailbox
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: mailbox
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        204:
+          description: Email moved
+        404:
+          description: Email or Mailbox not found
+        403:
+          description: Cannot move to sent mailbox
+
+components:
+  schemas:
+    Email:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        to:
+          type: object
+          properties:
+            name:
+              type: string
+            email:
+              type: string
+              format: email
+        from:
+          type: object
+          properties:
+            name:
+              type: string
+            email:
+              type: string
+              format: email
+        received:
+          type: string
+          format: date-time
+        sent:
+          type: string
+          format: date-time
+        content:
+          type: string
+        subject:
+          type: string

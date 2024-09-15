@@ -1,0 +1,47 @@
+{
+  "name": "cse186-assignment6",
+  "version": "2.0.0",
+  "description": "CSE186 Assignment 6 - Node.js & Express & PostgreSQL",
+  "author": "David Harrison <dcharris@ucsc.edu>",
+  "license": "UNLICENSED",
+  "repository": "none",
+  "devDependencies": {
+    "bestzip": "*",
+    "eslint": "8.57.0",
+    "eslint-config-google": "*",
+    "jest": "*",
+    "nodemon": "*",
+    "supertest": "*"
+  },
+  "dependencies": {
+    "dotenv": "*",
+    "express": "*",
+    "express-openapi-validator": "*",
+    "js-yaml": "*",
+    "pg": "*",
+    "swagger-ui-express": "*"
+  },
+  "jest": {
+    "testTimeout": 10000
+  },
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "test": "jest --runInBand --coverage --verbose --forceExit --detectOpenHandles",
+    "lint": "eslint src test --ext .js --no-inline-config --max-warnings 0",
+    "zip": "bestzip Assignment6.Submission.zip src/* api/* test/*"
+  },
+  "eslintConfig": {
+    "extends": [
+      "google"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 15
+    },
+    "rules": {
+      "indent": [
+        "warn",
+        2
+      ]
+    }
+  }
+}
