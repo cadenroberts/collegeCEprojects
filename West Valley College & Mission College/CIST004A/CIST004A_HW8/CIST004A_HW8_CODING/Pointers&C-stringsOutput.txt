@@ -1,0 +1,100 @@
+> sh -c make -s
+> ./main
+CADEN ROBERTS   CIST004A    10/22/22
+
+Enter a String: hello   there
+
+Select operation to perform on this string.
+1   Count the characters in the string.
+2   Count the vowels in the string.
+3   Uppercase the first character of each word in the string.
+4   Uppercase every character in the string.
+5   Remove extra spaces in the string.
+6   Enter a new string.
+0   Exit this program.
+Enter Operation: 1
+
+There are 13 characters in: "hello   there"
+
+Select operation to perform on this string.
+1   Count the characters in the string.
+2   Count the vowels in the string.
+3   Uppercase the first character of each word in the string.
+4   Uppercase every character in the string.
+5   Remove extra spaces in the string.
+6   Enter a new string.
+0   Exit this program.
+Enter Operation: 2
+
+There are 4 vowels in: "hello   there"
+
+Select operation to perform on this string.
+1   Count the characters in the string.
+2   Count the vowels in the string.
+3   Uppercase the first character of each word in the string.
+4   Uppercase every character in the string.
+5   Remove extra spaces in the string.
+6   Enter a new string.
+0   Exit this program.
+Enter Operation: 3
+
+Upper case first letters: "Hello   There".
+
+Select operation to perform on this string.
+1   Count the characters in the string.
+2   Count the vowels in the string.
+3   Uppercase the first character of each word in the string.
+4   Uppercase every character in the string.
+5   Remove extra spaces in the string.
+6   Enter a new string.
+0   Exit this program.
+Enter Operation: 5
+
+Extra spaces removed: "Hello There".
+
+Select operation to perform on this string.
+1   Count the characters in the string.
+2   Count the vowels in the string.
+3   Uppercase the first character of each word in the string.
+4   Uppercase every character in the string.
+5   Remove extra spaces in the string.
+6   Enter a new string.
+0   Exit this program.
+Enter Operation: 7
+
+Invalid Operation Request.
+
+Select operation to perform on this string.
+1   Count the characters in the string.
+2   Count the vowels in the string.
+3   Uppercase the first character of each word in the string.
+4   Uppercase every character in the string.
+5   Remove extra spaces in the string.
+6   Enter a new string.
+0   Exit this program.
+Enter Operation: 6
+
+Enter a String: red truck
+
+Select operation to perform on this string.
+1   Count the characters in the string.
+2   Count the vowels in the string.
+3   Uppercase the first character of each word in the string.
+4   Uppercase every character in the string.
+5   Remove extra spaces in the string.
+6   Enter a new string.
+0   Exit this program.
+Enter Operation: 4
+
+Shouting: "RED TRUCK".
+
+Select operation to perform on this string.
+1   Count the characters in the string.
+2   Count the vowels in the string.
+3   Uppercase the first character of each word in the string.
+4   Uppercase every character in the string.
+5   Remove extra spaces in the string.
+6   Enter a new string.
+0   Exit this program.
+Enter Operation: 0
+> 

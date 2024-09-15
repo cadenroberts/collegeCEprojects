@@ -1,0 +1,2 @@
+Inputs: (hello   there, 1, 2, 3, 5, 7, 6, red truck, 4, 0)
+Outputs: returned as expected

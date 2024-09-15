@@ -1,0 +1,16 @@
+Inputs (2in, 700lb)
+Expected Output (123025.0)
+
+Inputs (900in, 2lb)
+Expected Output (0.0017360)
+
+Inputs (65in, 150lb)
+Expected Output (24.9611)
+
+All expected outputs returned correct when program was ran.
+
+Extra Credit Precision values
+Expected: 0.3333333333333333333333333
+double result: 0.3333333333333333148296163
+float result: 0.3333333432674407958984375
+long double result: 0.3333333333333333333423684

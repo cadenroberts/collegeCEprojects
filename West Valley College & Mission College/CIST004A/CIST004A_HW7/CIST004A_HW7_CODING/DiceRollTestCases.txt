@@ -1,0 +1,11 @@
+TEST RUN 1 - (0, 4a6, 1, 1, 3D2, 2, 0, 1%1, 1)
+Expected Output - 2 rempromts for each input variable; a graph with min val 1, max val 2, and 40 stars on either 1 or 2
+Actual Output - Returned as expected
+
+TEST RUN 2 - (3, 6, 100000)
+Expected Output - min val 3, max 18, even bell curve
+Actual Output - Returned as expected
+
+TEST RUN 3 - (5, 7, 100000000)
+Expected Output - min val 5, max 35, even bell curve
+Actual Output - Returned as expected

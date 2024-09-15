@@ -1,0 +1,96 @@
+Caden Roberts           12/5/22         CIST004A
+
+Enter Heath Record Data. Hit <return> on any blank line to end.
+Health Record #1
+Enter the name(enter return when done): Horace
+Enter Horace's height in inches: 75
+Enter Horace's weight in pounds: 160
+
+Enter Heath Record Data. Hit <return> on any blank line to end.
+Health Record #2
+Enter the name(enter return when done): Greg
+Enter Greg's height in inches: 74
+Enter Greg's weight in pounds: 180
+
+Enter Heath Record Data. Hit <return> on any blank line to end.
+Health Record #3
+Enter the name(enter return when done): Brent
+Enter Brent's height in inches: 70
+Enter Brent's weight in pounds: 167
+
+Enter Heath Record Data. Hit <return> on any blank line to end.
+Health Record #4
+Enter the name(enter return when done): Julie
+Enter Julie's height in inches: 63
+Enter Julie's weight in pounds: 135
+
+Enter Heath Record Data. Hit <return> on any blank line to end.
+Health Record #5
+Enter the name(enter return when done): Marie
+Enter Marie's height in inches: 67
+Enter Marie's weight in pounds: 150
+
+Enter Heath Record Data. Hit <return> on any blank line to end.
+Health Record #6
+Enter the name(enter return when done): Jake
+Enter Jake's height in inches: 70
+Enter Jake's weight in pounds: 200
+
+Enter Heath Record Data. Hit <return> on any blank line to end.
+Health Record #7
+Enter the name(enter return when done): Jack
+Enter Jack's height in inches: 71
+Enter Jack's weight in pounds: 210
+
+Enter Heath Record Data. Hit <return> on any blank line to end.
+Health Record #8
+Enter the name(enter return when done): John
+Enter John's height in inches: 72
+Enter John's weight in pounds: 220
+
+Enter Heath Record Data. Hit <return> on any blank line to end.
+Health Record #9
+Enter the name(enter return when done): Yolanda
+Enter Yolanda's height in inches: 64
+Enter Yolanda's weight in pounds: 180
+
+Enter Heath Record Data. Hit <return> on any blank line to end.
+Health Record #10
+Enter the name(enter return when done): Albus
+Enter Albus's height in inches: 70
+Enter Albus's weight in pounds: 175
+
+Enter Heath Record Data. Hit <return> on any blank line to end.
+Health Record #11
+Enter the name(enter return when done):
+Record will not be created.
+
+Enter a new file name to create: hi.txt
+File name hi.txt already exists.
+Would you like to overwrite the file named "hi.txt"? (Y / N) :y
+The file "hi.txt" was successfully created.
+The file was written.
+The file "hi.txt" is 209 bytes long.
+
+Enter the final Health Record:
+Enter the name: Ronald
+Enter Ronald's height in inches: 65
+Enter Ronald's weight in pounds: 155
+The file "hi.txt" is now 231 bytes long.
+
+Now reading finalized file:
+Horace,75,160,20.00
+Greg,74,180,23.11
+Brent,70,167,23.96
+Julie,63,135,23.91
+Marie,67,150,23.49
+Jake,70,200,28.70
+Jack,71,210,29.29
+John,72,220,29.84
+Yolanda,64,180,30.90
+Albus,70,175,25.11
+Ronald,65,155,25.79
+
+
+C:\Users\Caden Roberts\source\repos\CSV Health Record\x64\Debug\CSV Health Record.exe (process 109316) exited with code 0.
+Press any key to close this window . . .

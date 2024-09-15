@@ -1,0 +1,24 @@
+> sh -c make -s
+> ./main
+Enter a number to factor: 657
+The prime factors are: 3, 3, 73 
+This took 0.004 mSec.
+> 
+
+> sh -c make -s
+> ./main
+Enter a number to factor: 4
+The prime factors are: 2, 2 
+This took 0.004 mSec.
+> 
+
+> sh -c make -s
+> ./main
+Enter a number to factor: 65742563
+The prime factors are: 65742563 
+This took 125.492 mSec.
+> 
+
+
+Time seems not to be correlated to size of input number as much as it is correlated with the highest resulting prime factor.
+

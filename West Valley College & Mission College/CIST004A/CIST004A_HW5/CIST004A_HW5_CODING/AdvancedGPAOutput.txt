@@ -1,0 +1,49 @@
+Test case Inputs (A+, 45.0, -b,    0.5, C, 45.001, 2, d=, F+, 0.499, 4, e,    D+, 3, Z)
+
+> sh -c make -s
+> ./main
+Caden Roberts CIST004A 9/20/22
+
+Intermediate GPA Calc Program
+
+To calculate your GPA, enter each letter grade in either upper or lower case with an optional + or - followed by the [Return] key. (If you have no more grades, enter z followed by the [Return] key.) Next, enter the number of units for the course followed by the [Return] key.
+
+Please Enter Grade for Class 1 (Z to exit): A+
+An A+ will score no better than an A!
+
+Please Enter Credit hours for Class 1: 45.0
+
+Please Enter Grade for Class 2 (Z to exit): -b
+Watch where you put the +/-!
+
+Please Enter Credit hours for Class 2:    0.5
+
+Please Enter Grade for Class 3 (Z to exit): C
+
+Please Enter Credit hours for Class 3: 45.001
+Please enter a valid # of Credit hours for class 3(0.5-45)
+
+Please Enter Credit hours for Class 3: 2
+
+Please Enter Grade for Class 4 (Z to exit): d=
+Please Enter Valid Grade Sign Modifier (+/-/ )
+
+Please Enter Grade for Class 4 (Z to exit): F+
+We'll throw you a bone on the F+!
+
+Please Enter Credit hours for Class 4: 0.499
+Please enter a valid # of Credit hours for class 4(0.5-45)
+
+Please Enter Credit hours for Class 4: 4
+
+Please Enter Grade for Class 5 (Z to exit): e
+Please Enter a Valid Letter Grade (A,B,C,D,F)
+
+Please Enter Grade for Class 5 (Z to exit):    D+
+
+Please Enter Credit hours for Class 5: 3
+
+Please Enter Grade for Class 6 (Z to exit): Z
+
+Your GPA for the 6 valid class entries is 3.494
+>

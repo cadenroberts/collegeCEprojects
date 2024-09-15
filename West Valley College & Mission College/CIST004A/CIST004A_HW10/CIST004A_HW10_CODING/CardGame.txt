@@ -1,0 +1,80 @@
+Inputs(3a4a, 52, 16, 25, 15, 45, 4, 29, 50)
+
+Outputs returned as expected.
+
+Caden Roberts                   11/7/22                         CIST004A
+
+* * * * * * * * *               Current Score           * * * * * * * * *
+|||     You     :       0               |||     Computer        :       0
+
+Please Enter a card number from 0 to 51: 3a4a
+
+
+Please Enter a card number from 0 to 51: 52
+
+
+Please Enter a card number from 0 to 51: 16
+
+Your selected card is:  Ten of Diamonds.
+The Computer's card is: Ten of Diamonds.
+You tied this round!
+
+* * * * * * * * *               Current Score           * * * * * * * * *
+|||     You     :       0               |||     Computer        :       0
+
+Please Enter a card number from 0 to 51: 25
+
+Your selected card is:  Jack of Diamonds.
+The Computer's card is: Nine of Diamonds.
+You win this round!
+
+* * * * * * * * *               Current Score           * * * * * * * * *
+|||     You     :       1               |||     Computer        :       0
+
+Please Enter a card number from 0 to 51: 15
+
+Your selected card is:  Eight of Clubs.
+The Computer's card is: Jack of Spades.
+You lose this round!
+
+* * * * * * * * *               Current Score           * * * * * * * * *
+|||     You     :       1               |||     Computer        :       1
+
+Please Enter a card number from 0 to 51: 45
+
+Your selected card is:  Nine of Hearts.
+The Computer's card is: Six of Hearts.
+You win this round!
+
+* * * * * * * * *               Current Score           * * * * * * * * *
+|||     You     :       2               |||     Computer        :       1
+
+Please Enter a card number from 0 to 51: 4
+
+Your selected card is:  Four of Diamonds.
+The Computer's card is: Nine of Diamonds.
+You lose this round!
+
+* * * * * * * * *               Current Score           * * * * * * * * *
+|||     You     :       2               |||     Computer        :       2
+
+Please Enter a card number from 0 to 51: 29
+
+Your selected card is:  Queen of Diamonds.
+The Computer's card is: Seven of Hearts.
+You lose this round!
+
+* * * * * * * * *               Current Score           * * * * * * * * *
+|||     You     :       2               |||     Computer        :       3
+
+Please Enter a card number from 0 to 51: 50
+
+Your selected card is:  Three of Hearts.
+The Computer's card is: King of Diamonds.
+You lose this round!
+And you lose the game!
+
+FINAL           SCORE           You - 2 :       Comp - 4
+
+C:\Users\Caden Roberts\source\repos\Deck of Cards Game\x64\Debug\Deck of Cards Game.exe (process 49252) exited with code 0.
+Press any key to close this window . . .

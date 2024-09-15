@@ -1,0 +1,47 @@
+Caden Roberts           11/17/22                CIST004A
+Creating 3 Test Bank Accounts:
+Account 1 (Base) balance: $50.01
+Account 2 (Savings) balance: $25.02
+Account 3 (Checking) balance: $80.03
+
+Bank Account Withdrawal Tests:
+Now withdrawing $25.00 from account 1.
+Now withdrawing $30.00 from account 2.
+Insufficient funds to honor the withdrawal request.
+Now withdrawing $40.00 from account 3.
+$1.00 checking transaction fee charged.
+
+Account 1 balance: $25.01
+Account 2 balance: $25.02
+Account 3 balance: $39.03
+
+Bank Account Deposit Tests:
+Now depositing $40.23 to account 1.
+Now depositing $65.99 to account 2.
+Now depositing $20.01 to account 3.
+$1.00 checking account transaction fee charged.
+
+Account 1 balance: $65.24
+Account 2 balance: $91.01
+Account 3 balance: $58.04
+
+Bank Account Interest Test:
+Adding $4.55 interest to account 2.
+The new account 2 balance is: $95.56
+
+Bank Account Name Tests:
+Account 1 name: There is currently no name registered to the account.
+Account 2 name: There is currently no name registered to the account.
+Account 3 name: There is currently no name registered to the account.
+
+Now naming account 1 to James Black.
+Now naming account 2 to Christie Johnson.
+Now naming account 3 to Kris Deen.
+
+New account 1 name: James Black
+New account 2 name: Christie Johnson
+New account 3 name: Kris Deen
+
+
+C:\Users\Caden Roberts\source\repos\Bank Account Heirarchy Program\x64\Debug\Bank Account Heirarchy Program.exe (process 75820) exited with code 0.
+Press any key to close this window . . .

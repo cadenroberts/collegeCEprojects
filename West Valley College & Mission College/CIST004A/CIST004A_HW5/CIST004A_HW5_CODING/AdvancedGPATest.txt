@@ -1,0 +1,4 @@
+Test case Inputs (A+, 45.0, -b,    0.5, C, 45.001, 2, d=, F+, 0.499, 4, e,    D+, 3, Z)
+Expected GPA Output (3.494)
+
+GPA and all outputs returned as expected

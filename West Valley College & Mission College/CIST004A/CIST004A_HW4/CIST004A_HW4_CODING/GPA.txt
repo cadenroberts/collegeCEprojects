@@ -1,0 +1,27 @@
+> sh -c make -s
+> ./main
+Caden Roberts CIST004A 9/13/22
+
+Enter a GPA (0.0-4.0) for Student #1: 4.0001
+
+Enter a valid GPA (0.0-4.0) for Student #1: 4.000
+
+Enter a GPA (0.0-4.0) for Student #2: 0
+
+Enter a GPA (0.0-4.0) for Student #3: -0.0001
+
+Enter a valid GPA (0.0-4.0) for Student #3: 0.0001
+
+Enter a GPA (0.0-4.0) for Student #4: -1.001
+
+Enter a valid GPA (0.0-4.0) for Student #4: -0.999
+
+Enter a valid GPA (0.0-4.0) for Student #4: -1
+
+
+The lowest GPA entered was: 0.000
+
+The highest GPA entered was: 4.000
+
+The average GPA was: 1.333
+> 

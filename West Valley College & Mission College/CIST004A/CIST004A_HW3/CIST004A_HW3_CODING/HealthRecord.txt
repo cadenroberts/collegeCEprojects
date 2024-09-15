@@ -1,0 +1,57 @@
+If input (Caden Roberts, 68in, 188 pounds, Cole Roberts, 68in, 173 pounds):
+
+> sh -c make -s
+> ./main
+Caden Roberts CIST004A
+
+Please Enter The First Person's Name: Caden Roberts
+Please Enter Caden Roberts's height in inches: 68 
+Please Enter Caden Roberts's weight in pounds: 188
+
+Please Enter The Second Person's Name: Cole Roberts
+Please Enter Cole Roberts's height in inches: 68
+Please Enter Cole Roberts's weight in pounds: 173
+
+Caden Roberts's BMI is 28.585.
+Cole Roberts's BMI is 26.3043.
+Cole Roberts is 'healthier' than Caden Roberts.
+> 
+
+If input (George Brown, 100in, 1000 pounds, Greg Green, 50in, 50 pounds):
+
+> sh -c make -s
+> ./main
+Caden Roberts CIST004A
+
+Please Enter The First Person's Name: George Brown
+Please Enter George Brown's height in inches: 100
+Please Enter George Brown's weight in pounds: 1000
+
+Please Enter The Second Person's Name: Greg Green
+Please Enter Greg Green's height in inches: 50
+Please Enter Greg Green's weight in pounds: 50
+
+George Brown's BMI is 70.307.
+Greg Green's BMI is 14.0614.
+Greg Green is 'healthier' than George Brown.
+> 
+
+
+If input (Sarah, 60in, 120 pounds, Ashley, 65in, 135 pounds):
+
+> sh -c make -s
+> ./main
+Caden Roberts CIST004A
+
+Please Enter The First Person's Name: Sarah
+Please Enter Sarah's height in inches: 60
+Please Enter Sarah's weight in pounds: 120
+
+Please Enter The Second Person's Name: Ashley
+Please Enter Ashley's height in inches: 65
+Please Enter Ashley's weight in pounds: 135
+
+Sarah's BMI is 23.4357.
+Ashley's BMI is 22.465.
+Ashley is 'healthier' than Sarah.
+> 

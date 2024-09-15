@@ -1,0 +1,10 @@
+Inputs (Caden Roberts, 68in, 188 pounds, Cole Roberts, 68in, 173 pounds)
+Expected Output (Caden Roberts BMI= 28.585, Cole Roberts BMI= 26.3043, Cole Roberts "healthier" than Caden Roberts)
+
+Inputs (George Brown, 100in, 1000 pounds, Greg Green, 50in, 50 pounds)
+Expected Output (George Brown BMI= 70.307, Greg Green BMI= 14.0614, Greg Green "healthier" than George Brown)
+
+Inputs (Sarah, 60in, 120 pounds, Ashley, 65in, 135 pounds)
+Expected Output (Sarah BMI= 23.4357, Ashley BMI= 22.465, Ashley is "healthier" than Sarah)
+
+All expected outputs returned correct when program was ran.

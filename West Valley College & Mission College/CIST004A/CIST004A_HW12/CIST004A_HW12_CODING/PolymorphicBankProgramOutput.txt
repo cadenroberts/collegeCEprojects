@@ -1,0 +1,32 @@
+Caden Roberts           11/17/22                CIST004A
+
+Account 1 balance: $25.00
+Enter an amount to withdraw from Account 1: 40
+Insufficient funds to withdraw from this account.
+Enter an amount to deposit to Account 1: 10
+Adding $1.05 to Account 1 (Savings Account)
+Updated Account 1 balance: $36.05
+
+Account 2 balance: $80.00
+Enter an amount to withdraw from Account 2: 12
+Checking Fee of $2.00 charged.
+Enter an amount to deposit to Account 2: 25
+Checking Fee of $2.00 charged.
+Updated Account 2 balance: $89.00
+
+Account 3 balance: $200.00
+Enter an amount to withdraw from Account 3: 20
+Enter an amount to deposit to Account 3: 0
+Adding $2.70 to Account 3 (Savings Account)
+Updated Account 3 balance: $182.70
+
+Account 4 balance: $400.00
+Enter an amount to withdraw from Account 4: 450
+Insufficient funds to withdraw from this account.
+$35.00 overdraft fee charged and $1.50 checking fee charged. $96.20 remaining in Savings Account.
+Enter an amount to deposit to Account 4: 25
+Checking Fee of $1.50 charged.
+Updated Account 4 balance: $23.50
+
+C:\Users\Caden Roberts\source\repos\Polymorphic Bank Accounts\x64\Debug\Polymorphic Bank Accounts.exe (process 84584) exited with code 0.
+Press any key to close this window . . .
