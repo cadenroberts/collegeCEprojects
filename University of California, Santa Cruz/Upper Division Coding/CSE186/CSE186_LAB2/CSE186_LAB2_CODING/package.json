@@ -1,0 +1,33 @@
+{
+  "name": "cse196-assignment2",
+  "type": "module",
+  "version": "2.2.0",
+  "description": "CSE196 Assignment 2 - JavsScript DOM",
+  "author": "David Harrison <dcharris@ucsc.edu>",
+  "license": "UNLICENSED",
+  "repository": "none",
+  "devDependencies": {
+    "bestzip": "*",
+    "eslint": "*",
+    "eslint-config-google": "*",
+    "jest": "*",
+    "puppeteer": "*",
+    "puppeteer-core": "*",
+    "puppeteer-to-istanbul": "*",
+    "nyc": "*"
+  },
+  "jest": {
+    "collectCoverage": false,
+    "testTimeout": 5000,
+    "testMatch": [
+      "<rootDir>/tests/*.test.js"
+    ]
+  },
+  "scripts": {
+    "coverage": "nyc report --reporter=html --reporter=text-summary",
+    "jest": "jest --runInBand",
+    "test": "(start npm run jest && start npm run coverage) || (npm run jest && npm run coverage)",
+    "lint": "eslint src/**/*",
+    "zip": "bestzip CSE186-Assignment2-Submission.zip src/templater.html src/Templater.js src/picker.css src/Picker.js tests/picker.test.js"
+  }
+}

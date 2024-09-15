@@ -1,0 +1,84 @@
+/* CSS for the Advanced requirement */
+body {
+  font-family: Arial, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: ghostwhite;
+}
+
+#datePicker {
+  border: 1px solid gainsboro;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 0 10px gainsboro;
+  padding: 20px;
+  width: 350px;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#controls button {
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+#controls button:hover {
+  background-color: blue;
+}
+
+#display {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.daysWeek {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: gray;
+}
+
+.daysMonth {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.daysMonth div {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.daysMonth div:hover {
+  background-color: silver;
+}
+
+.daysMonth div.greyed {
+  color: gainsboro;
+}
+
+.daysMonth div.highlighted {
+  background-color: dodgerblue;
+  color: white;
+}
+
+

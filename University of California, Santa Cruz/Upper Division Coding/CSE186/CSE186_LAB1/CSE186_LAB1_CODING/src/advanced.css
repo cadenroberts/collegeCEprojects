@@ -1,0 +1,49 @@
+.vert {
+}
+
+.nums {
+  display: flex;
+  border: 5px solid yellow;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.chars {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.char {
+  width: 100px;
+  height: 180px;
+  font-size: 60px;
+  font-family: "Courier", monospace;
+  background-color: navy;
+  color: white;
+  padding-left: 10px;
+}
+
+.num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 40px;
+  font-family: "Courier", monospace;
+  color: yellow;
+  background-color: black;
+}
+
+.char:hover {
+  background-color: white;
+  color: navy;
+}
+
+.num:hover {
+  background-color: yellow;
+  color: black;
+}

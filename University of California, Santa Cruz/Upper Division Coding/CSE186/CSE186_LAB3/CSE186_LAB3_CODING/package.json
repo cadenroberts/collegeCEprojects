@@ -1,0 +1,39 @@
+{
+  "name": "cse186-assignment3",
+  "type": "module",
+  "version": "3.0.0",
+  "description": "CSE186 Assignment 3",
+  "author": "David Harrison <dcharris@ucsc.edu>",
+  "license": "UNLICENSED",
+  "repository": "none",
+  "dependencies": {
+    "prop-types": "*",
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "*",
+    "@testing-library/react": "*",
+    "@testing-library/user-event": "*",
+    "@vitejs/plugin-react": "*",
+    "@vitest/coverage-v8": "*",
+    "bestzip": "*",
+    "eslint": "8.57.0",
+    "eslint-config-google": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
+    "eslint-plugin-react-refresh": "*",
+    "jsdom": "*",
+    "vite": "*",
+    "vite-plugin-eslint": "*",
+    "vitest": "*"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --port 3000",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "test": "vitest run --coverage",
+    "watch": "vitest",
+    "zip": "bestzip CSE186-Assignment3-Submission.zip src/App.css src/Entry.* src/Picker.* src/__tests__/*"
+  }
+}

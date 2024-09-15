@@ -1,0 +1,33 @@
+/* 
+  CSE186 Assignment 1
+
+  CSS for Basic Requirement 
+*/
+
+.vert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.char {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: yellow;
+    font-size: 40px;
+    font-family: "Courier", monospace;
+}
+
+.num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: yellow;
+    font-size: 40px;
+    font-family: "Courier", monospace;
+}

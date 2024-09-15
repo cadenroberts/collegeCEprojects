@@ -1,0 +1,25 @@
+{
+  "name": "cse186-assignment1",
+  "version": "1.0.0",
+  "description": "CSE186 Assignment 1",
+  "author": "David Harrison <dcharris@ucsc.edu>",
+  "license": "UNLICENSED",
+  "repository": "none",
+  "devDependencies": {
+    "bestzip": "*",
+    "jest": "*",
+    "pixelmatch": "*",
+    "puppeteer": "*",
+    "puppeteer-core": "*",
+    "replace": "*"
+  },
+  "jest": {
+    "testMatch": [
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ]
+  },
+  "scripts": {
+    "test": "jest --testTimeout=5000 --runInBand --verbose --forceExit --detectOpenHandles",
+    "zip": "bestzip CSE186-Assignment1-Submission.zip src/*"
+  }
+}
