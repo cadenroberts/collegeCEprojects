@@ -1,0 +1,8 @@
+Turn end at 21.
+Turn end at 27.
+Turn end at 84.
+Turn end at 91.
+Turn end at 96.
+Reached final square 100.
+Minimum moves for the board is 6.
+Program ended with exit code: 0

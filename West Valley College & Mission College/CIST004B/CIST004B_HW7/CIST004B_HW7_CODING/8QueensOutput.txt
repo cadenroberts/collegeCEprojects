@@ -1,0 +1,73 @@
+Caden Roberts	3/23/23	CIST04B
+Stack Pre-Test Passed!
+
+Please enter n for the n-queens problem (n >= 1): 3
+No solutions were found.
+Program ended with exit code: 0
+
+Caden Roberts	3/23/23	CIST04B
+Stack Pre-Test Passed!
+
+Please enter n for the n-queens problem (n >= 1): 5
+Solution for n = 5
+=========
+- - - Q -  Queen in row 1, column 4
+- Q - - -  Queen in row 2, column 2
+- - - - Q  Queen in row 3, column 5
+- - Q - -  Queen in row 4, column 3
+Q - - - -  Queen in row 5, column 1
+=========
+Program ended with exit code: 0
+
+Caden Roberts	3/23/23	CIST04B
+Stack Pre-Test Passed!
+
+Please enter n for the n-queens problem (n >= 1): 8
+Solution for n = 8
+===============
+- - - Q - - - -  Queen in row 1, column 4
+- Q - - - - - -  Queen in row 2, column 2
+- - - - - - Q -  Queen in row 3, column 7
+- - Q - - - - -  Queen in row 4, column 3
+- - - - - Q - -  Queen in row 5, column 6
+- - - - - - - Q  Queen in row 6, column 8
+- - - - Q - - -  Queen in row 7, column 5
+Q - - - - - - -  Queen in row 8, column 1
+===============
+Program ended with exit code: 0
+
+Caden Roberts	3/23/23	CIST04B
+Stack Pre-Test Passed!
+
+Please enter n for the n-queens problem (n >= 1): 27
+Solution for n = 27
+=====================================================
+- - - - - - - - - - - - - - - - - - - - - Q - - - - -  Queen in row 1, column 22
+- - - - - - - - - - - - - - - - - - - Q - - - - - - -  Queen in row 2, column 20
+- - - - - - - - - - - - - - - - - Q - - - - - - - - -  Queen in row 3, column 18
+- - - - - - - - - - - - - - - - - - - - Q - - - - - -  Queen in row 4, column 21
+- - - - - - - - - - - - - Q - - - - - - - - - - - - -  Queen in row 5, column 14
+- - - - - - - - - - - Q - - - - - - - - - - - - - - -  Queen in row 6, column 12
+- - - - - - - Q - - - - - - - - - - - - - - - - - - -  Queen in row 7, column 8
+- - - - - - - - - - - - - - - Q - - - - - - - - - - -  Queen in row 8, column 16
+- - - - - - Q - - - - - - - - - - - - - - - - - - - -  Queen in row 9, column 7
+- - - - - - - - - Q - - - - - - - - - - - - - - - - -  Queen in row 10, column 10
+- - - - - Q - - - - - - - - - - - - - - - - - - - - -  Queen in row 11, column 6
+- - - - - - - - - - - - - - - - - - - - - - - - - Q -  Queen in row 12, column 26
+- - - - - - - - - - - - - - - - - - - - - - - Q - - -  Queen in row 13, column 24
+- - - - - - - - - - - - - - - - - - - - - - - - - - Q  Queen in row 14, column 27
+- - - - - - - - - - - - - - - - - - - - - - - - Q - -  Queen in row 15, column 25
+- - - - - - - - - - - - - - - - - - - - - - Q - - - -  Queen in row 16, column 23
+- - - - - - - - - - - - - - - - - - Q - - - - - - - -  Queen in row 17, column 19
+- - - - - - - - - - - - - - - - Q - - - - - - - - - -  Queen in row 18, column 17
+- - - - - - - - - - - - - - Q - - - - - - - - - - - -  Queen in row 19, column 15
+- - - - - - - - - - - - Q - - - - - - - - - - - - - -  Queen in row 20, column 13
+- - - - - - - - - - Q - - - - - - - - - - - - - - - -  Queen in row 21, column 11
+- - - - - - - - Q - - - - - - - - - - - - - - - - - -  Queen in row 22, column 9
+- - - Q - - - - - - - - - - - - - - - - - - - - - - -  Queen in row 23, column 4
+- Q - - - - - - - - - - - - - - - - - - - - - - - - -  Queen in row 24, column 2
+- - - - Q - - - - - - - - - - - - - - - - - - - - - -  Queen in row 25, column 5
+- - Q - - - - - - - - - - - - - - - - - - - - - - - -  Queen in row 26, column 3
+Q - - - - - - - - - - - - - - - - - - - - - - - - - -  Queen in row 27, column 1
+=====================================================
+Program ended with exit code: 0

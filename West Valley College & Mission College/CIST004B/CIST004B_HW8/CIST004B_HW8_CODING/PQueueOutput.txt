@@ -1,0 +1,75 @@
+Running tests for the PriorityQueue class
+
+START OF TEST 1:
+simple tests of insert and get_front (10 points).
+A. Testing size and is_empty for an empty priority queue.
+Test passed.
+
+B. Adding one item to the queue, and then testing
+   is_empty, size, and get_front.
+Test passed.
+
+C. Inserting two items (first has higher priority).
+   Then checking that both items come out correctly.
+Test passed.
+
+D. Inserting two items (second has higher priority).
+   Then checking that both items come out correctly.
+Test passed.
+
+E. Inserting eight items with priorities of
+   8, 10, 3, 3, 8, 6, 10, 6 (in that order)
+   Then checking that all items come out correctly.
+Test passed.
+
+F. Inserting 400 random items with random
+   priorities, and checking that all items come out right.
+Test passed.
+
+Test 1 got 10 points out of a possible 10.
+END OF TEST 1.
+
+
+START OF TEST 2:
+Testing for possible heap leaks (4 points).
+Checking for possible heap leak.
+This could occur if the assignment operator, get_front, or
+the destructor does not correctly release memory.
+Testing for heap leak in get_front...passed.
+Testing for heap leak in destructor ... passed.
+Testing for heap leak in assignment operator ... passed.
+No heap leaks found.
+Test 2 got 4 points out of a possible 4.
+END OF TEST 2.
+
+
+START OF TEST 3:
+Testing the copy constructor (3 points).
+A. Testing that copy constructor works okay for empty queue...Test passed.
+
+B. Testing copy constructor with 4-item queue...Test passed.
+
+Copy constructor seems okay.
+Test 3 got 3 points out of a possible 3.
+END OF TEST 3.
+
+
+START OF TEST 4:
+Testing the assignment operator (3 points).
+A. Testing that assignment operator works okay for empty queue...Test passed.
+
+B. Testing assignment operator with 4-item queue...Test passed.
+
+C. Testing assignment operator for a self-assignment...passed.
+Assignment operator seems okay.
+Test 4 got 3 points out of a possible 3.
+END OF TEST 4.
+
+
+YOUR RESULTS:
+You have successfully earned 20 points out of a possible 20 points.
+
+If you submit this PriorityQueue to Canvas now, this part of the 
+grade could be as high as 10 points out of 10 points.
+
+Program ended with exit code: 0

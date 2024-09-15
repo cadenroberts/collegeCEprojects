@@ -1,0 +1,103 @@
+Running tests for Table template class
+
+START OF TEST 1:
+Testing insert and the const member functions (11 points).
+A. Testing size, is_present and find for an empty table.
+Test passed.
+
+B. Adding a record with key 4 to the Table, and then testing
+   size, is_present and find.
+Test passed.
+
+C. Adding a record with key 813 to the Table, and then testing
+   size, is_present and find.
+Test passed.
+
+D. Adding a NEW record with key 4 to the Table, and then testing.
+   This should change the record with key number 4.
+Test passed.
+
+E. Adding a record with key 811 to the Table, and then testing.
+
+Test passed.
+
+F. Adding a record with key 810 to the Table, and then testing.
+
+Test passed.
+
+G. Adding a record with key 1611 to the Table, and then testing.
+
+Test passed.
+
+H. Adding a record with key 0 to the Table, and then testing.
+
+Test passed.
+
+I. Inserting 3000 random items with keys
+between 0 and 5000, and then testing.
+Test passed.
+
+Test 1 got 11 points out of a possible 11.
+END OF TEST 1.
+
+
+START OF TEST 2:
+Testing remove (5 points).
+A. Putting one record into the Table, then removing it.
+
+Test passed.
+
+B. Adding a records with keys 4,5,6 to the Table, and then
+   removing the 5 before testing.
+Test passed.
+
+C. Trying to remove a key that is not present.
+   This should have no effect on the Table.
+Test passed.
+
+D. Inserting 3000 random items with keys
+between 0 and 5000, and then removing about half.
+Test passed.
+
+Test 2 got 5 points out of a possible 5.
+END OF TEST 2.
+
+
+START OF TEST 3:
+Testing for possible heap leaks,Testing the copy constructor (3 points).
+Checking for possible heap leak.
+No heap leaks found.
+Test 3 got 3 points out of a possible 3.
+END OF TEST 3.
+
+
+START OF TEST 4:
+Testing the assignment operator (3 points).
+A. Testing that copy constructor works okay for empty table...Test passed.
+
+B. Testing copy constructor with Table that has 4,5,6,7 keys...Test passed.
+
+Copy constructor seems okay.
+Test 4 got 3 points out of a possible 3.
+END OF TEST 4.
+
+
+START OF TEST 5:
+ (3 points).
+A. Testing that assignment works okay for empty table...Test passed.
+
+B. Testing assignment with Table that has 4,5,6,7 keys...Test passed.
+
+C. Testing assignment operator for a self-assignment...passed.
+Assignment operator seems okay.
+Test 5 got 3 points out of a possible 3.
+END OF TEST 5.
+
+
+YOUR RESULTS:
+You have successfully earned 25 points out of a possible 25 points.
+
+If you submit this Binary Tree Program to Canvas now, this part of the 
+grade could be as high as 10 points out of 10 points.
+
+Program ended with exit code: 0

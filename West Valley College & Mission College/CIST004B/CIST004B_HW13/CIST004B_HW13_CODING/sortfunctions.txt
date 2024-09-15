@@ -1,0 +1,221 @@
+######## 1 ########
+CIST 004B Sorting Assignment.  Worth 20 points
+
+Enter the size of Array you wish to sort (not more than 100,000,000): 50000
+Do you wish a single run (Y/N): y
+
+Now executing a sample Shaker Sort of 50000 items.
+A sample Shaker Sort took 3.188950 Seconds.
+Now Executing a sample Shaker Sort of 50000 mostly (99.9%) sorted items.
+A sample Shaker Sort took 0.003834 Seconds.
+Now Executing a sample Shaker Sort of 50000 pre-sorted items.
+A sample Shaker Sort took 0.000121 Seconds.
+
+Now executing the Quick Sort from the Book of 50000 items.
+The Quick Sort from the Book took 0.003649 Seconds.
+Now Executing the Quick Sort from the Book of 50000 mostly (99.9%) sorted items.
+The Quick Sort from the Book took 0.128623 Seconds.
+Now Executing the Quick Sort from the Book of 50000 pre-sorted items.
+The Quick Sort from the Book took 0.706328 Seconds.
+
+Now executing the Bubble Sort of 50000 items.
+The Bubble Sort took 4.456658 Seconds.
+Now Executing the Bubble Sort of 50000 mostly (99.9%) sorted items.
+The Bubble Sort took 1.477928 Seconds.
+Now Executing the Bubble Sort of 50000 pre-sorted items.
+The Bubble Sort took 1.472779 Seconds.
+
+Now executing your Optimized Bubble Sort of 50000 items.
+Your Optimized Bubble Sort took 4.842095 Seconds.
+Now Executing your Optimized Bubble Sort of 50000 mostly (99.9%) sorted items.
+Your Optimized Bubble Sort took 1.469536 Seconds.
+Now Executing your Optimized Bubble Sort of 50000 pre-sorted items.
+Your Optimized Bubble Sort took 0.000082 Seconds.
+
+Now executing your Selection Sort of 50000 items.
+Your Selection Sort took 1.484129 Seconds.
+Now Executing your Selection Sort of 50000 mostly (99.9%) sorted items.
+Your Selection Sort took 1.513999 Seconds.
+Now Executing your Selection Sort of 50000 pre-sorted items.
+Your Selection Sort took 2.132062 Seconds.
+
+Now executing your Insertion Sort of 50000 items.
+Your Insertion Sort took 0.788813 Seconds.
+Now Executing your Insertion Sort of 50000 mostly (99.9%) sorted items.
+Your Insertion Sort took 0.001471 Seconds.
+Now Executing your Insertion Sort of 50000 pre-sorted items.
+Your Insertion Sort took 0.000111 Seconds.
+
+Now executing the C++ Built-in Quick Sort of 50000 items.
+The C++ Built-in Quick Sort took 0.003692 Seconds.
+Now Executing the C++ Built-in Quick Sort of 50000 mostly (99.9%) sorted items.
+The C++ Built-in Quick Sort took 0.000470 Seconds.
+Now Executing the C++ Built-in Quick Sort of 50000 pre-sorted items.
+The C++ Built-in Quick Sort took 0.000186 Seconds.
+
+Now executing your Quick Sort of 50000 items.
+Your Quick Sort took 0.004025 Seconds.
+Now Executing your Quick Sort of 50000 mostly (99.9%) sorted items.
+Your Quick Sort took 0.239013 Seconds.
+Now Executing your Quick Sort of 50000 pre-sorted items.
+Your Quick Sort took 1.474700 Seconds.
+
+Now executing your Non-Recursive Quick Sort of 50000 items.
+Your Non-Recursive Quick Sort took 0.004662 Seconds.
+Now Executing your Non-Recursive Quick Sort of 50000 mostly (99.9%) sorted items.
+Your Non-Recursive Quick Sort took 0.238048 Seconds.
+Now Executing your Non-Recursive Quick Sort of 50000 pre-sorted items.
+Your Non-Recursive Quick Sort took 1.472995 Seconds.
+
+Now executing your Multi-Threaded Quick Sort of 50000 items.
+Your Multi-Threaded Quick Sort took 0.006208 Seconds.
+Now Executing your Multi-Threaded Quick Sort of 50000 mostly (99.9%) sorted items.
+Your Multi-Threaded Quick Sort took 0.238404 Seconds.
+Now Executing your Multi-Threaded Quick Sort of 50000 pre-sorted items.
+Your Multi-Threaded Quick Sort took 1.476183 Seconds.
+
+Now executing your Merge Sort of 50000 items.
+Your Merge Sort took 0.006617 Seconds.
+Now Executing your Merge Sort of 50000 mostly (99.9%) sorted items.
+Your Merge Sort took 0.003481 Seconds.
+Now Executing your Merge Sort of 50000 pre-sorted items.
+Your Merge Sort took 0.003378 Seconds.
+
+Now executing your Non-Recursive Merge Sort of 50000 items.
+Your Non-Recursive Merge Sort took 0.005839 Seconds.
+Now Executing your Non-Recursive Merge Sort of 50000 mostly (99.9%) sorted items.
+Your Non-Recursive Merge Sort took 0.003045 Seconds.
+Now Executing your Non-Recursive Merge Sort of 50000 pre-sorted items.
+Your Non-Recursive Merge Sort took 0.002997 Seconds.
+
+Program exited with code: 0
+
+####### 2 #######
+CIST 004B Sorting Assignment.  Worth 20 points
+
+Enter the size of Array you wish to sort (not more than 100,000,000): 32868
+Do you wish a single run (Y/N): y
+
+Now executing a sample Shaker Sort of 32868 items.
+A sample Shaker Sort took 1.337449 Seconds.
+Now Executing a sample Shaker Sort of 32868 mostly (99.9%) sorted items.
+A sample Shaker Sort took 0.001399 Seconds.
+Now Executing a sample Shaker Sort of 32868 pre-sorted items.
+A sample Shaker Sort took 0.000091 Seconds.
+
+Now executing the Quick Sort from the Book of 32868 items.
+The Quick Sort from the Book took 0.002404 Seconds.
+Now Executing the Quick Sort from the Book of 32868 mostly (99.9%) sorted items.
+The Quick Sort from the Book took 0.126919 Seconds.
+Now Executing the Quick Sort from the Book of 32868 pre-sorted items.
+The Quick Sort from the Book took 0.306324 Seconds.
+
+Now executing the Bubble Sort of 32868 items.
+The Bubble Sort took 1.837143 Seconds.
+Now Executing the Bubble Sort of 32868 mostly (99.9%) sorted items.
+The Bubble Sort took 0.638138 Seconds.
+Now Executing the Bubble Sort of 32868 pre-sorted items.
+The Bubble Sort took 0.636598 Seconds.
+
+Now executing your Optimized Bubble Sort of 32868 items.
+Your Optimized Bubble Sort took 1.988211 Seconds.
+Now Executing your Optimized Bubble Sort of 32868 mostly (99.9%) sorted items.
+Your Optimized Bubble Sort took 0.592061 Seconds.
+Now Executing your Optimized Bubble Sort of 32868 pre-sorted items.
+Your Optimized Bubble Sort took 0.000052 Seconds.
+
+Now executing your Selection Sort of 32868 items.
+Your Selection Sort took 0.627573 Seconds.
+Now Executing your Selection Sort of 32868 mostly (99.9%) sorted items.
+Your Selection Sort took 0.708822 Seconds.
+Now Executing your Selection Sort of 32868 pre-sorted items.
+Your Selection Sort took 0.927315 Seconds.
+
+Now executing your Insertion Sort of 32868 items.
+Your Insertion Sort took 0.336969 Seconds.
+Now Executing your Insertion Sort of 32868 mostly (99.9%) sorted items.
+Your Insertion Sort took 0.000556 Seconds.
+Now Executing your Insertion Sort of 32868 pre-sorted items.
+Your Insertion Sort took 0.000076 Seconds.
+
+Now executing the C++ Built-in Quick Sort of 32868 items.
+The C++ Built-in Quick Sort took 0.002372 Seconds.
+Now Executing the C++ Built-in Quick Sort of 32868 mostly (99.9%) sorted items.
+The C++ Built-in Quick Sort took 0.000311 Seconds.
+Now Executing the C++ Built-in Quick Sort of 32868 pre-sorted items.
+The C++ Built-in Quick Sort took 0.000108 Seconds.
+
+Now executing your Quick Sort of 32868 items.
+Your Quick Sort took 0.002642 Seconds.
+Now Executing your Quick Sort of 32868 mostly (99.9%) sorted items.
+Your Quick Sort took 0.224055 Seconds.
+Now Executing your Quick Sort of 32868 pre-sorted items.
+Your Quick Sort took 0.638589 Seconds.
+
+Now executing your Non-Recursive Quick Sort of 32868 items.
+Your Non-Recursive Quick Sort took 0.002968 Seconds.
+Now Executing your Non-Recursive Quick Sort of 32868 mostly (99.9%) sorted items.
+Your Non-Recursive Quick Sort took 0.223955 Seconds.
+Now Executing your Non-Recursive Quick Sort of 32868 pre-sorted items.
+Your Non-Recursive Quick Sort took 0.637403 Seconds.
+
+Now executing your Multi-Threaded Quick Sort of 32868 items.
+Your Multi-Threaded Quick Sort took 0.008070 Seconds.
+Now Executing your Multi-Threaded Quick Sort of 32868 mostly (99.9%) sorted items.
+Your Multi-Threaded Quick Sort took 0.223922 Seconds.
+Now Executing your Multi-Threaded Quick Sort of 32868 pre-sorted items.
+Your Multi-Threaded Quick Sort took 0.638026 Seconds.
+
+Now executing your Merge Sort of 32868 items.
+Your Merge Sort took 0.004256 Seconds.
+Now Executing your Merge Sort of 32868 mostly (99.9%) sorted items.
+Your Merge Sort took 0.002344 Seconds.
+Now Executing your Merge Sort of 32868 pre-sorted items.
+Your Merge Sort took 0.002118 Seconds.
+
+Now executing your Non-Recursive Merge Sort of 32868 items.
+Your Non-Recursive Merge Sort took 0.003759 Seconds.
+Now Executing your Non-Recursive Merge Sort of 32868 mostly (99.9%) sorted items.
+Your Non-Recursive Merge Sort took 0.002013 Seconds.
+Now Executing your Non-Recursive Merge Sort of 32868 pre-sorted items.
+Your Non-Recursive Merge Sort took 0.001976 Seconds.
+
+Program ended with exit code: 0
+
+######### FINAL RUN #########
+
+CIST 004B Sorting Assignment.  Worth 20 points
+
+Enter the size of Array you wish to sort (not more than 100,000,000): 2500
+Do you wish a single run (Y/N): n
+
+Testing every Sort Routine with array sizes from 0 to 2500 numbers.
+Starting at:				Mon May  8 19:03:52 2023
+   0 . . . . . . . . . .	Mon May  8 19:03:52 2023
+ 100 . . . . . . . . . .	Mon May  8 19:03:52 2023
+ 200 . . . . . . . . . .	Mon May  8 19:03:52 2023
+ 300 . . . . . . . . . .	Mon May  8 19:03:52 2023
+ 400 . . . . . . . . . .	Mon May  8 19:03:52 2023
+ 500 . . . . . . . . . .	Mon May  8 19:03:52 2023
+ 600 . . . . . . . . . .	Mon May  8 19:03:53 2023
+ 700 . . . . . . . . . .	Mon May  8 19:03:53 2023
+ 800 . . . . . . . . . .	Mon May  8 19:03:53 2023
+ 900 . . . . . . . . . .	Mon May  8 19:03:54 2023
+1000 . . . . . . . . . .	Mon May  8 19:03:54 2023
+1100 . . . . . . . . . .	Mon May  8 19:03:55 2023
+1200 . . . . . . . . . .	Mon May  8 19:03:55 2023
+1300 . . . . . . . . . .	Mon May  8 19:03:56 2023
+1400 . . . . . . . . . .	Mon May  8 19:03:57 2023
+1500 . . . . . . . . . .	Mon May  8 19:03:58 2023
+1600 . . . . . . . . . .	Mon May  8 19:03:59 2023
+1700 . . . . . . . . . .	Mon May  8 19:04:01 2023
+1800 . . . . . . . . . .	Mon May  8 19:04:02 2023
+1900 . . . . . . . . . .	Mon May  8 19:04:04 2023
+2000 . . . . . . . . . .	Mon May  8 19:04:06 2023
+2100 . . . . . . . . . .	Mon May  8 19:04:08 2023
+2200 . . . . . . . . . .	Mon May  8 19:04:10 2023
+2300 . . . . . . . . . .	Mon May  8 19:04:13 2023
+2400 . . . . . . . . . .
+Finished at:				Mon May  8 19:04:15 2023
+
+Program ended with exit code: 0

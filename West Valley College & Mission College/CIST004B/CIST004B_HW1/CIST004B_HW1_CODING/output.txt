@@ -1,0 +1,152 @@
+Calculator Functionality Data Test Plan
+Test 1: 
+(num inputs=101,100 ; data inputs = 0,1001,1,1000,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,
+2,2,2,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,
+6,6,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,9,9,9,9,9,9,9,9,9,9,1000,1000,1000,1000,
+1000,1000,1000,1000,1000))
+(expected: Min-1, Max-1000, Mean-104.5, Median-5, Modes-1,2,3,4,5,6,7,8,9,1000)
+Test 2:
+(num inputs=0,1 ; data inputs = 70)
+(expected: Min-70, Max-70, Mean-70, Median-70, Mode-70)
+// OUTPUT # 1
+Caden W Roberts                         CIST004B  1/31/23
+Minimum, Maximum, Mean, Median and Mode Calculator with extra polish and multimodal support.
+How many numbers are in your list (1 to 100)?: 101
+Really!  You are prepared to enter 101 numbers?  I don't think so!
+How many numbers are in your list (1 to 100)?: 100
+
+Your list may have numbers between 1 and 1000.
+
+Enter the 1st number: 0
+Please enter a valid number between 1 and 1000!
+Enter the 1st number: 1001
+Please enter a valid number between 1 and 1000!
+Enter the 1st number: 1
+Enter the 2nd number: 1000
+Enter the 3rd number: 1
+Enter the 4th number: 1
+Enter the 5th number: 1
+Enter the 6th number: 1
+Enter the 7th number: 1
+Enter the 8th number: 1
+Enter the 9th number: 1
+Enter the 10th number: 1
+Enter the 11th number: 1
+Enter the 12th number: 2
+Enter the 13th number: 2
+Enter the 14th number: 2
+Enter the 15th number: 2
+Enter the 16th number: 2
+Enter the 17th number: 2
+Enter the 18th number: 2
+Enter the 19th number: 2
+Enter the 20th number: 2
+Enter the 21st number: 2
+Enter the 22nd number: 3
+Enter the 23rd number: 3
+Enter the 24th number: 3
+Enter the 25th number: 3
+Enter the 26th number: 3
+Enter the 27th number: 3
+Enter the 28th number: 3
+Enter the 29th number: 3
+Enter the 30th number: 3
+Enter the 31st number: 3
+Enter the 32nd number: 4
+Enter the 33rd number: 4
+Enter the 34th number: 4
+Enter the 35th number: 4
+Enter the 36th number: 4
+Enter the 37th number: 4
+Enter the 38th number: 4
+Enter the 39th number: 4
+Enter the 40th number: 4
+Enter the 41st number: 4
+Enter the 42nd number: 5
+Enter the 43rd number: 5
+Enter the 44th number: 5
+Enter the 45th number: 5
+Enter the 46th number: 5
+Enter the 47th number: 5
+Enter the 48th number: 5
+Enter the 49th number: 5
+Enter the 50th number: 5
+Enter the 51st number: 5
+Enter the 52nd number: 6
+Enter the 53rd number: 6
+Enter the 54th number: 6
+Enter the 55th number: 6
+Enter the 56th number: 6
+Enter the 57th number: 6
+Enter the 58th number: 6
+Enter the 59th number: 6
+Enter the 60th number: 6
+Enter the 61st number: 6
+Enter the 62nd number: 7
+Enter the 63rd number: 7
+Enter the 64th number: 7
+Enter the 65th number: 7
+Enter the 66th number: 7
+Enter the 67th number: 7
+Enter the 68th number: 7
+Enter the 69th number: 7
+Enter the 70th number: 7
+Enter the 71st number: 7
+Enter the 72nd number: 8
+Enter the 73rd number: 8
+Enter the 74th number: 8
+Enter the 75th number: 8
+Enter the 76th number: 8
+Enter the 77th number: 8
+Enter the 78th number: 8
+Enter the 79th number: 8
+Enter the 80th number: 8
+Enter the 81st number: 8
+Enter the 82nd number: 9
+Enter the 83rd number: 9
+Enter the 84th number: 9
+Enter the 85th number: 9
+Enter the 86th number: 9
+Enter the 87th number: 9
+Enter the 88th number: 9
+Enter the 89th number: 9
+Enter the 90th number: 9
+Enter the 91st number: 9
+Enter the 92nd number: 1000
+Enter the 93rd number: 1000
+Enter the 94th number: 1000
+Enter the 95th number: 1000
+Enter the 96th number: 1000
+Enter the 97th number: 1000
+Enter the 98th number: 1000
+Enter the 99th number: 1000
+Enter the 100th number: 1000
+
+The list of numbers has the following characteristics:
+The Minimum is : 1
+The Maximum is: 1000
+The Mean is: 104.5
+The Median is: 5
+The list is multimodal, and contains 10 modes. The modes are: 1, 2, 3, 4, 5, 6, 7, 8, 9 and 1000.
+C:\Users\Caden Roberts\source\repos\MMMMHW\x64\Debug\MMMMHW.exe (process 56232) exited with code 0.
+Press any key to close this window . . .
+
+// OUTPUT #2
+Caden W Roberts                         CIST004B  1/31/23
+Minimum, Maximum, Mean, Median and Mode Calculator with extra polish and multimodal support.
+How many numbers are in your list (1 to 100)?: 0
+Hey come on!  The list must have at least 1 number!
+How many numbers are in your list (1 to 100)?: 1
+
+Your list may have numbers between 1 and 1000.
+
+Enter the 1st number: 70
+
+The list of numbers has the following characteristics:
+The Minimum is : 70
+The Maximum is: 70
+The Mean is: 70
+The Median is: 70
+The Mode is: 70
+C:\Users\Caden Roberts\source\repos\MMMMHW\x64\Debug\MMMMHW.exe (process 51752) exited with code 0.
+Press any key to close this window . . .
