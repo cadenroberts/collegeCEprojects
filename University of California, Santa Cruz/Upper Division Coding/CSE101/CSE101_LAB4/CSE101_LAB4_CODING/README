@@ -1,0 +1,20 @@
+cleanded_movielist.txt:
+The provided list of movies and actors.
+
+Makefile:
+The Makefile to create the executables for the problem
+
+README:
+This file.
+
+simple-input.txt:
+A simple test input file.
+
+simple-output.txt:
+The expected output for simple-input.txt
+
+sixdegrees.cpp:
+The .cpp file containing my solution to the six degrees problem.
+
+Tests/:
+A folder containing a larger input file and corresponding output file.
