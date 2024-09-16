@@ -1,0 +1,37 @@
+Class Descriptions:
+
+CSE100 - Logic Design
+Boolean algebra, logic minimization, finite-state machine design, sequential circuits, common logic elements, programmable
+logic devices, and an introduction to system level design. The electrical behavior of circuits including three state outputs,
+propagation delay, logic levels, and fanout.
+
+CSE101 - Introduction to Data Structures and Algorithms
+Introduction to abstract data types and basics of algorithms. Linked lists, stacks, queues, hash tables, trees, heaps, and
+graphs will be covered. Students will also be taught how to derive big-Oh analysis of simple algorithms.
+All assignments will be in C/C++.
+
+CSE107 - Probability and Statistics for Engineers
+Introduction to fundamental tools of stochastic analysis. Probability, conditional probability; Bayes Theorem;
+random variables and transforms; independence; Bernnoulli trials. Statistics, inference from limited data;
+outcomes of repeated experiments; applications to design; assessment of relative frequency and probability; law of large numbers;
+precision of measurements. Elements of stochastic processes, Poisson processes; Markov chains.
+
+CSE150 - Introduction to Computer Networks
+Addresses issues arising in organizing communications among autonomous computers. Network models and conceptual layers;
+Internet-working; characteristics of transmission media; switching techniques (packet switching, circuit switching, cell switching);
+medium access control (MAC) protocols and local area networks; error-control strategies and link-level protocols;
+routing algorithms for bridges and routers; congestion control mechanisms; transport protocols; application of concepts to practical
+wireless and wireline networks and standard protocol architectures.
+
+CSE186 - Full Stack Web Development I
+This course examines current uses of the World-Wide Web for delivery of the sophisticated interactive applications we use daily.
+Web Applications offer several advantages over traditional, locally installable binaries including heterogeneous deployment,
+instantaneous access, continuous updates, and the possibility of collaboration at scale. These Full Stack Web Applications are
+typically more complex than their traditional counterparts, requiring the seamless integrating of numerous related technologies if
+end users are to have a productive experience and the system is to remain robust, performant, and secure.
+
+ECE103 - Signals and Systems
+The course covers the following topics: characterization and analysis of continuous-time signals and linear systems,
+time domain analysis using convolution, frequency domain analysis using the Fourier series and the Fourier transform,
+the Laplace transform, transfer functions and block diagrams, continuous-time filters, sampling of continuous time signals,
+examples of applications to communications and control systems.
