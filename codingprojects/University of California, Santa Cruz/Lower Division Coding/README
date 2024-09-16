@@ -1,0 +1,12 @@
+Class Descriptions:
+
+CSE12 - Computer Systems and Assembly Language and Lab
+Introduction to computer systems and assembly language and how computers compute in hardware and software.
+Topics include digital logic, number systems, data structures, compiling/assembly process, basics of the system software,
+and computer architecture. Course is 7 credits with integrated laboratories illustrating concepts covered in lecture.
+Note that CSE 12 assumes some programming experience.
+
+CSE13S - Comp Sys and C Program
+C programming, command line, shell programming, editors, debuggers, source code control, and other tools.
+Basic computer systems, algorithm design and development, data types, program structures.
+Develops understanding of process model, compile-link-execute build cycle, language-machine interface, memory, and data representation.
