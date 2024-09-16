@@ -1,0 +1,10 @@
+Class Descriptions:
+
+CIS007 - Python Programming
+Taught at Mission College. This is an introductory course in programming using Python. No prior programming experience is required. Students learn to design, code, and execute programs using the Python programming language and tools. This class covers basic programming skills such as data types, control structure, algorithm development, and program design with functions. It also includes lists, object-oriented programming and graphics programming concepts and topics.
+
+CIST004A - Computer Programming I (C++ Programming)
+This is a foundation course emphasizing the concepts and methodologies of programming using the C++ language. Emphasis is on good programming style, object-oriented design, decomposition, encapsulation, abstraction, and testing. Example topics include memory allocation, flow control, logic, objects, classes, methods and argument passing, control structures, and iteration. Students have the opportunity to learn programming, documentation and software testing skills, algorithmic problem-solving, programming methodologies, and to write and debug small to medium-sized programs.
+
+CIST004B - Data Structures using Advanced C++
+This is a continuation of CIST 004A (Introduction to Computer Programming I-C++) intended for students majoring in CIS-Computer Science Option and/or planning to transfer to a 4-year college or university Computer Science program. CIST 004B introduces concepts of abstract data types, C++ classes, separate compilation, and information hiding. Topics in data structures (dynamic allocation, linked lists, stacks and queues, and binary trees), and sorting/searching algorithms are introduced. The course includes both lecture and programming in C++.
