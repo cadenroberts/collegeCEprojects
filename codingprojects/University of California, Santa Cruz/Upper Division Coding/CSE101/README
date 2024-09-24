@@ -11,15 +11,62 @@ Lab 2 - Place your queens with care
   taking as input the position of multiple queens that are already placed on the
   chessboard and then placing the remaining queens if possible.
 
-Lab 3 - 
+Lab 3 - AVL: Life is all about balance
+  Implemented an AVL and program to take an input file with a massive list of words
+  to insert, interspersed with range queries (lexographic). Wrote the number of
+  words in the range for each query to an output file.
+
+Lab 4 - It's a small world after all (Six Degrees problem)
+  Designed a program to solve the “Six Degrees of Kevin Bacon” game, parsing over
+  100,000 <movie> <actor> <actor> credits from a dataset into a graph and performed
+  shortest path computations.
 
 
-Lab 4 - 
+Test 1 - Linked Lists
+To prepare for the test, I coded up various linked list operations.
+I was only tested on 1 random one.
+  - Wrote a function that deletes the kth occurrence of a value (for an
+    additional argument k).
+  - Wrote a function to delete the last occurrence of a value.
+  - Wrote a function to delete all but the first occurrence of a value.
+  - Wrote a function to test if list is a palindrome.
+  - Wrote a function to rotate a linked list by x.
+  - Wrote a function to reverse first k elements of a linked list. 
+  - Wrote a function to reverse last k elements of a linked list. 
+  - Wrote a function that reverses every block of k elements (reverse the
+    first k elements, then reverse the next k elements, etc.)
+  - Wrote a function to convert a linked list to a palindrome by appending
+    the reverse of the list.
 
-Test 1 - 
+Test 2 - Stacks
+To prepare for the test, I coded up various recursive stack functions.
+I was only tested on 1 random one.
+  - Wrote a function to list all anagrams of a string.
+  - Wrote a function to generate all letter combinations of a string from
+    length 0 to k, for example, (ab, 2) would be (empty), a, b, aa, bb, ab.
+  - Wrote a function to 'stretch' a string in order up to k times, and at
+    least once, For example, (ab, 2) would be ab, aab, abb, aabb.
+  - Wrote a function to generate the 'bubblings' of a string, for example,
+    (abc) would be abc, acb, bac, bca.
 
-Test 2 - 
+Test 3 - Binary Search Tree
+To prepare for the test, I coded up 2 Binary Search Tree operations.
+I was only tested on 1 random one.
+  - Wrote a function to find the Least Common Ancestor between 2 nodes
+  - Wrote a function to find the size of the largest level in a Binary
+    Search Tree (Largest number of nodes the same distance from the root)
 
-Test 3 - 
 
-Test 4 - 
+Test 4 - Graphs
+Answered 2 graph questions in psuedocode.
+  - A common recommendation feature used in social networking websites is the
+    number of common friends. In an undirected graph G, find a pair (u, v) with
+    the largest number of common neighbors.
+  - Biologists often construct a food network of species in an ecosystem. The
+    vertices represent species, and a directed edge (u, v) means species u eats
+    species v. An apex species is one that is not eaten by another species. Suppose
+    you are give a list of all possible “eating” relationships (so a list of “u eats
+    v”). Determine all apex species.
+
+
+
