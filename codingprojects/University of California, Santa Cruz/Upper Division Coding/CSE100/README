@@ -1,0 +1,24 @@
+CSE 100 Lab Descriptions
+
+Lab 1 - 7 Segment Display
+  Implemented a 7 Segment Display Decoder in Verilog.
+  Wrote a decoder that displayed a 4-bit hex nibble onto the on-board 7-Segment Display.
+  Programmed my implementation to a Basys 3 FPGA Board.
+
+Lab 2 - Arithmatic Logic Unit
+  Implemented an Arithmetic Logic Unit, capable of doing addition, subtraction,
+  square root, and base 2 logarithms.
+  Programmed my implementation to a Basys 3 FPGA Board.
+
+Lab 3 - Screensaver
+  Implemented a VGA interface with a counter built from adders and flip-flops, and
+  displayed the contents of a ROM over VGA.
+  Programmed my implementation to a Basys 3 FPGA Board.
+
+Lab 4 - Stop It
+  Implemented a state machine as part of a sequential circuit for a game called 'Stop It'.
+  Programmed my implementation to a Basys 3 FPGA Board.
+
+Lab 5 - Dino Run
+  Implemented a state machine and connected several modules as part of a game called 'Dino Run'.
+  Programmed my implementation to a Basys 3 FPGA Board.
