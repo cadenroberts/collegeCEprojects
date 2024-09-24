@@ -1,0 +1,25 @@
+CSE 101 Lab and Test Descriptions - All done in C++
+
+Lab 1 - Much ado about linking
+  Did a word analysis of all the compositions of William Shakespeare, using a file
+  shakespeare-cleaned.txt which contained all compositions of William Shakespeare.
+  Wrote a program capable of returning for any word length l and number k,
+  what is the k most frequent word of length l?
+
+Lab 2 - Place your queens with care
+  Solved n-queens, with a twist, and no recursion. Wrote a program capable of
+  taking as input the position of multiple queens that are already placed on the
+  chessboard and then placing the remaining queens if possible.
+
+Lab 3 - 
+
+
+Lab 4 - 
+
+Test 1 - 
+
+Test 2 - 
+
+Test 3 - 
+
+Test 4 - 
