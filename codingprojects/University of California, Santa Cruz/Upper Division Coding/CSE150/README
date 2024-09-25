@@ -1,0 +1,24 @@
+CSE 150 Lab Descriptions
+
+Lab 1 - Mininet
+  Used python scripts to run mininet and connect 4 hosts to a switch.
+  Wrote a shell script to print all even lines of any file.
+
+Lab 2 - HTTPS, DNS, and TCP
+  Analyzed HTTP, DNS, and TCP protocols, packets, codes, requests, 
+  responses, and connections using wireshark and mininet.
+
+Lab 3 - Firewall using OpenFlow
+  Created a simple firewall using OpenFlow-enabled switches. 
+  Used a python scripted Mininet configuration to setup my
+  network, and created the firewall in a POX controller.
+
+Lab 4 Final Project - Router
+  Created a Mininet Topology and Pox controller with the following features:
+  - All hosts are able to communicate, EXCEPT:
+  - Untrusted Host cannot send ICMP and IP traffic to Host 101-104, 201-204,
+    or the LLM Server.
+  - Trusted Host cannot send IP and ICMP traffic to Host 201-204 in Department B,
+    or the LLM Server.
+  - Hosts in Department A (Host 101-104) cannot send any ICMP traffic to the hosts
+    in Department B (Host 201-204), and vice versa.
