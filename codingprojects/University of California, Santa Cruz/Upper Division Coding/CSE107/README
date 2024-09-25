@@ -1,0 +1,44 @@
+CSE 107 Lab Descripitions
+
+Lab 1
+  Alice and Bob have 2𝑛 + 1 coins, each with probability of a head equal to 1/2.
+  Bob tosses 𝑛 + 1 coins, while Alice tosses the remaining n coins. Assuming
+  independent coin tosses, show that the probability that after all the coins have been
+  tossed, Bob will have gotten more heads than Alice is 1/2.
+
+Lab 2
+  An urn contains 𝑎 azure balls and 𝑐 carmine balls, where 𝑎 > 0 and 𝑐 > 0. Balls
+  are selected from the urn at random and discarded, until the first time a selected ball
+  has a color different from its predecessor. That ball is then replaced, and the
+  procedure is restarted. (Observe that each iteration of this procedure results in at
+  least one ball being discarded.) The process continues until the last ball is
+  discarded. Show that this last ball is equally likely to be azure or carmine.
+
+Lab 3
+  Joe Lucky plays the lottery on any given week with probability 𝑝, independently of whether
+  he played on any other week. Each time he plays, he has a probability 𝑞 of winning, again
+  independently of everything else. During a fixed time period of 𝑛 weeks, let 𝑋 be the number
+  of weeks that he played the lottery and 𝑌 be the number of weeks that he won.
+
+Lab 4
+  Suppose you have two coins for which 𝑃(Coin 1 = heads) = 𝑝 and 𝑃(Coin 2 = heads) = 𝑞.
+  Flip Coin 1 until the first head appears, counting the number of flips. Let 𝑁 be the number of flips in
+  this first sequence. Next, perform 𝑁 flips of Coin 2, counting the number of heads. Let 𝑌 be the number
+  of heads in this second sequence. Note that 𝑁 is Geometric with parameter 𝑝. If 𝑋𝑖 is the random variable
+  𝑋𝑖 = { 1 if the 𝑖th flip of Coin 2 is heads, 0 if the 𝑖th flip of Coin 2 is tails } then we see each 𝑋𝑖
+  is Bernoulli with parameter 𝑞. We assume of course that all coin flips are independent, so the set
+  {𝑁, 𝑋1, 𝑋2, … } is independent. Observe that 𝑌 = 𝑋1 + 𝑋2 + ⋯ ⋯ ⋯ + 𝑋𝑁 is the sum of a random number of
+  independent identically distributed (iid) random variables. We will derive the mean and variance of 𝑌,
+  in terms of 𝑝 and 𝑞, in lecture. Your goal in this assignment will be to compute both 𝐸[𝑌] and Var(𝑌)
+  experimentally, for various values of 𝑝 and 𝑞. Each approximate mean and variance you compute in this
+  project will be obtained by performing 10,000 trials of the above experiment.
+
+Lab 5
+  In this project you will construct the CDF of a random variable 𝑍 = 𝑌1 + 𝑌2, where both 𝑌1 and 𝑌2 are
+  exponential random variables with parameter 𝜆 = 1. You will present your CDF as a table similar in
+  form to the Standard Normal CDF table posted on the class webpage. We will show in lecture that 𝑍
+  has a well-known distribution called the Erlang distribution. Here you will construct your CDF by
+  performing 20,000 trials of the following simple experiment. Obtain samples 𝑌1 and 𝑌2 of the
+  exponential distribution, then compute the sum 𝑍 = 𝑌1 + 𝑌2. Using these trials, compute the relative
+  frequencies of the events {𝑍 ≤ 𝑧} for all 𝑧 ∈ {0.0, 0.1, 0.2, 0.3, … …, 9.7, 9.8, 9.9}, which are 100
+  equally spaced points in the range 0.0 to 9.9, at distance 0.1 apart. 
