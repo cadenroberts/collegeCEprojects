@@ -1,2 +1,26 @@
 ECE 103 Lab descriptions - MATLAB
 
+Lab 1 - Introduction to MATLAB
+  Defined, graphed, and computed functions over certain intervals.
+
+Lab 2 - Visualizing Signal in MATLAB
+  Plotted multiple signal functions and computer energies and frequencies.
+
+Lab 3 - Convolutions and Impulse Responses
+  Plotted convolutions of functions and derived impulse responses of differentials
+  of an RLC circuit and an Industrial Shock Absorber.
+
+Lab 4 - Fourier Series
+  Wrote a function to calculate Fourier coefficients. Plotted spectrum, reconstructed
+  time domain signals, and real and imaginary parts of functions.
+
+Lab 5 - Fourier Transform and Inverse Fourier Transform
+  Plotted IFT of frequency domain signals, and real and imaginary parts of the function.
+  Plotted magnitude and phase using convolution theorem. Calculated energy using
+  Parseval's theorem.
+
+Lab 6 - ECG Signals, Modulation and Demodulation
+  Plotted phase and magnitude response of functions. Used FT and IFT. Calculated
+  energy of signals in frequency domain using Parseval's theorem. Plotted magnitude of
+  transmitted signal in frequency domain, time domain transmitted signal, and time domain
+  demodulated and low-pass filtered output signal and corresponding frequency domain spectrum.
