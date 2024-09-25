@@ -1,0 +1,36 @@
+CSE 186 Lab Descriptions
+
+Lab 1
+  Modified a simple HTML page and Style Sheets to display the elements of the page
+  in distinct ways.
+
+Lab 2
+  Wrote JavaScript classes to modify the content of HTML pages via the DOM. Used knowledge
+  of CSS and HTML acquired in the previous assignment and gained new JavaScript skills in
+  the process.
+
+Lab 3
+  Wrote a simple React Web App using JSX classes and tests to demonstrate they work
+  as expected. Used skills gained in previous assignments and learned new ones, particularly
+  test automation.
+
+Lab 4
+  Wrote a React and Material-UI Responsive Web App based on wire-frame designs given
+  to me by a supposed client. Used React State and Context and did not use React Props
+  more than twice.
+
+Lab 5
+  Wrote a Node.js & Express RESTful E-Mail API and associated tests to demonstrate it
+  worked as required.
+
+Lab 6
+  Wrote a Node.js & Express RESTful E-Mail API backed by a PostgreSQL database and
+  associated tests to demonstrate it worked as required.
+
+Lab 7
+  Wrote a simple Full Stack Web App and tests to demonstrate it worked as required.
+
+Lab 8
+  Created Diligent, a Slack style messaging system, as a Single Page Full Stack Web App
+  using the NERP Stack: Node.js, Express, React, and PostgreSQL, plus Material-UI. Gained an
+  understanding of how sophisticated a well-tested Full Stack Web App can be developed in limited time.
