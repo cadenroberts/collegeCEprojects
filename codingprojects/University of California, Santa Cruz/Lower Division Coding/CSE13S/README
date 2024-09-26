@@ -1,8 +1,8 @@
 CSE 13S Lab Descriptions - C
 
 Lab 0 - Script Testing
-Wrote shell scripts to tests which of a long list of adding functions
-properly return results as expected according to the listed rules.
+  Wrote shell scripts to tests which of a long list of adding functions
+  properly return results as expected according to the listed rules.
 
 Lab 1 - LRC game
   LRC is a dice game. Each player starts with 3 chips and rolls a die for each chip,
