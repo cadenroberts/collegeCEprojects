@@ -1,2 +1,47 @@
 CSE 13S Lab Descriptions - C
 
+Lab 0 - Script Testing
+Wrote shell scripts to tests which of a long list of adding functions
+properly return results as expected according to the listed rules.
+
+Lab 1 - LRC game
+  LRC is a dice game. Each player starts with 3 chips and rolls a die for each chip,
+  with a maximum of 3 rolls per turn. If a player rolls a 1, 2, or 3, this is a 'dot'
+  and the player keeps their chip. If a player rolls a 4 they must give their chip
+  to the player to the left. If a player rolls a 5 they must give their chip to the
+  'center', essentially discarding it. If a player rolls a 6 they must give their chip
+  to the player to the right. The game continues until only one player has chips.
+  I programmed this game with number of players and random number seed as inputs.
+
+Lab 2 - Hangman
+  I programmed the game Hangman, taking a word to guess as input and displaying the
+  phrase with guessed letters filled in, incorrect guesses below, and the state of the
+  hanging man for each turn.
+
+
+Lab 3 - XXD
+  I programmed the XXD function to display binary files in their hexadecimal form.
+
+Lab 4 - Calculator
+  I programmed a calculator with absolute value function, square root function,
+  sin and cos using Maclaurin series, and tan function.
+
+Lab 5 - Towers
+  Built a 'tower', an application, atop a hash table, atop a linked list, atop a
+  key/value pair datatype. Efficiently implemented a complex task with the
+  sophisticated data structure and an algorithm.
+
+Lab 6 - Surfin' U.S.A.
+  Used graph theory to determine the least gas used to travel to every city in
+  the 1963 song "Surfin' U.S.A.", starting and ending in Santa Cruz, visiting
+  each city only once. This involved edges between vertices with different
+  weights.
+
+Lab 7 - Huffman Coding
+  Writing the Huffman Coding program consisted of 5 steps:
+  -  Read a file, count the frequency of each symbol. Create a histogram of the files
+     bytes/symbols
+  -  Create a code tree from the histogram
+  -  Fill a 256-entry code table, one entry for each byte value
+  -  Rewind the input file with fseek()
+  -  Create a Huffman Coded (compressed) file from the input file
