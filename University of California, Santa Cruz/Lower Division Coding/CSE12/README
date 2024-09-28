@@ -1,1 +1,19 @@
-CSE 12 Lab Descriptions - Digital / RISCV
+CSE 12 Lab Descriptions - Digital / RISC-V
+
+Lab 1 - Intro to Logic Stimulation
+  Created truth tables from logic expressions in Digital using logic gate circuits,
+  SOP, and POS. Used logic reduction on large expressions. Created truth tables from
+  NMOS/PMOS transistor circuits.
+
+Lab 2 - Higher Order Logic
+  Built an ALU that could perform bitwise left rotation in digital. Created
+  a logic circuit to illuminate 2 7 segment leds according to a 4 bit binary
+  input. Created a 4 register data path for the ALU.
+
+Lab 3 - Looping with RISC-V Assembly
+  Created a RISC-V program that could print a right triangle of asterisks to
+  the console with a height determined from user input.
+
+Lab 4 - Merging Sorted Linked Lists
+  Created a linked list in RISC-V and defined functions to insert and sort
+  a linked list and to merge 2 sorted lists.
