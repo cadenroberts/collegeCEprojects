@@ -1,0 +1,19 @@
+ECE 101 Lab Descriptions
+
+Lab 1 - Fundamental Circuit Theory Laws
+  I verified KVL and KCL using nodal analysis equations and
+  by measuring voltage, current and power for multiple resistors
+  in a set circuit.
+
+Lab 2 - Fundamental Circuit Theory Theorems
+  Experimented to verify Thevenin's and Norton's theorems, as
+  well as the Max Power Trasnfer theorem.
+
+Lab 3 - Single Time Constant Circuits
+  Investigated transient voltage and current for single time
+  constant circuits involving capacitors and inductors.
+
+Lab 4 - Sinusoidal Steady State Filters
+  Investigated the frequency domain characteristics of steady
+  state linear wave filters. Measured amplitude and phase reponses
+  and correlated them with the underlying theory.
