@@ -1,0 +1,14 @@
+.SUBCKT lvs A B C_N D_N VGND VNB VPB VPWR Y
+MMN0 VGND a_205_93# Y VNB sky130_fd_pr__nfet_01v8 m=1 w=0.65u l=0.15u mult=1 sa=0.265 sb=0.265 sd=0.28 area=0.063 perim=1.14
+MMP1 a_573_297# A VPWR VPB sky130_fd_pr__pfet_01v8_hvt m=1 w=1.00u l=0.15u mult=1 sa=0.265 sb=0.265 sd=0.28 area=0.063 perim=1.14
+MMP2 a_27_410# C_N VPWR VPB sky130_fd_pr__pfet_01v8_hvt m=1 w=0.42u l=0.15u mult=1 sa=0.265 sb=0.265 sd=0.28 area=0.063 perim=1.14
+MMP3 a_393_297# a_27_410# a_477_297# VPB sky130_fd_pr__pfet_01v8_hvt m=1 w=1.00u l=0.15u mult=1 sa=0.265 sb=0.265 sd=0.28 area=0.063 perim=1.14
+MMP4 a_477_297# B a_573_297# VPB sky130_fd_pr__pfet_01v8_hvt m=1 w=1.00u l=0.15u mult=1 sa=0.265 sb=0.265 sd=0.28 area=0.063 perim=1.14
+MMP5 Y a_205_93# a_393_297# VPB sky130_fd_pr__pfet_01v8_hvt m=1 w=1.00u l=0.15u mult=1 sa=0.265 sb=0.265 sd=0.28 area=0.063 perim=1.14
+MMN6 Y A VGND VNB sky130_fd_pr__nfet_01v8 m=1 w=0.65u l=0.15u mult=1 sa=0.265 sb=0.265 sd=0.28 area=0.063 perim=1.14
+MMN7 VGND D_N a_205_93# VNB sky130_fd_pr__nfet_01v8 m=1 w=0.42u l=0.15u mult=1 sa=0.265 sb=0.265 sd=0.28 area=0.063 perim=1.14
+MMN8 VGND B Y VNB sky130_fd_pr__nfet_01v8 m=1 w=0.65u l=0.15u mult=1 sa=0.265 sb=0.265 sd=0.28 area=0.063 perim=1.14
+MMP9 VPWR D_N a_205_93# VPB sky130_fd_pr__pfet_01v8_hvt m=1 w=0.42u l=0.15u mult=1 sa=0.265 sb=0.265 sd=0.28 area=0.063 perim=1.14
+MMN10 Y a_27_410# VGND VNB sky130_fd_pr__nfet_01v8 m=1 w=0.65u l=0.15u mult=1 sa=0.265 sb=0.265 sd=0.28 area=0.063 perim=1.14
+MMN11 a_27_410# C_N VGND VNB sky130_fd_pr__nfet_01v8 m=1 w=0.42u l=0.15u mult=1 sa=0.265 sb=0.265 sd=0.28 area=0.063 perim=1.14
+.ENDS lvs

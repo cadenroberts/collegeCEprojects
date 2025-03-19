@@ -1,0 +1,33 @@
+* 15-stage Ring Oscillator using sky130_fd_sc_hd__inv_1
+.lib '~/.volare/sky130A/libs.tech/ngspice/sky130.lib.spice' tt
+.include '~/.volare/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice'
+.param supply_voltage=1.8V
+.option temp=25
+VDD vdd 0 supply_voltage
+X1  n1    gnd  gnd vdd vdd n2 sky130_fd_sc_hd__inv_1
+X2  n2    gnd  gnd vdd vdd n3 sky130_fd_sc_hd__inv_1
+X3  n3    gnd  gnd vdd vdd n4 sky130_fd_sc_hd__inv_1
+X4  n4    gnd  gnd vdd vdd n5 sky130_fd_sc_hd__inv_1
+X5  n5    gnd  gnd vdd vdd n6 sky130_fd_sc_hd__inv_1
+X6  n6    gnd  gnd vdd vdd n7 sky130_fd_sc_hd__inv_1
+X7  n7    gnd  gnd vdd vdd n8 sky130_fd_sc_hd__inv_1
+X8  n8    gnd  gnd vdd vdd n9 sky130_fd_sc_hd__inv_1
+X9  n9    gnd  gnd vdd vdd n10 sky130_fd_sc_hd__inv_1
+X10 n10   gnd  gnd vdd vdd n11 sky130_fd_sc_hd__inv_1
+X11 n11   gnd  gnd vdd vdd n12 sky130_fd_sc_hd__inv_1
+X12 n12   gnd  gnd vdd vdd n13 sky130_fd_sc_hd__inv_1
+X13 n13   gnd  gnd vdd vdd n14 sky130_fd_sc_hd__inv_1
+X14 n14   gnd  gnd vdd vdd out sky130_fd_sc_hd__inv_1
+X15 out   gnd  gnd vdd vdd n1 sky130_fd_sc_hd__inv_1
+*X16 n16   gnd  gnd vdd vdd out sky130_fd_sc_hd__inv_1
+*X17 out   gnd  gnd vdd vdd n1 sky130_fd_sc_hd__inv_1
+.IC V(out) = 0
+.IC V(n1) = 1.8v
+.tran 0.1n 10n
+.param half_supply = '0.5*supply_voltage'
+.measure tran period TRIG v(out) VAL='half_supply' RISE=1 TARG v(out) VAL='half_supply' RISE=2
+.control
+run
+quit
+.endc
+.END
