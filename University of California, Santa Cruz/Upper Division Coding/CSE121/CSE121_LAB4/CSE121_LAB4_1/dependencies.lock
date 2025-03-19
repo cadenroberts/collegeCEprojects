@@ -1,0 +1,42 @@
+dependencies:
+  cmd_nvs:
+    dependencies: []
+    source:
+      path: /Users/cadenroberts/esp/v5.3.1/esp-idf/examples/system/console/advanced/components/cmd_nvs
+      type: local
+    version: '*'
+  cmd_system:
+    dependencies: []
+    source:
+      path: /Users/cadenroberts/esp/v5.3.1/esp-idf/examples/system/console/advanced/components/cmd_system
+      type: local
+    version: '*'
+  cmd_wifi:
+    dependencies: []
+    source:
+      path: /Users/cadenroberts/esp/v5.3.1/esp-idf/examples/system/console/advanced/components/cmd_wifi
+      type: local
+    version: '*'
+  espressif/icm42670:
+    component_hash: 3327870e7a125e7278f318297726138278f0cda2898f2461c01af0423d4afcda
+    dependencies:
+    - name: idf
+      registry_url: https://components.espressif.com
+      require: private
+      version: '>=4.4'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.0
+  idf:
+    source:
+      type: idf
+    version: 5.3.1
+direct_dependencies:
+- cmd_nvs
+- cmd_system
+- cmd_wifi
+- espressif/icm42670
+manifest_hash: 5dc955c0f2368b56b47be0b9828c2b428e73bd6902afc0eea64fc6d305f371b1
+target: esp32c3
+version: 2.0.0

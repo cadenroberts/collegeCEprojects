@@ -1,0 +1,77 @@
+#!/usr/bin/env python3
+import RPi.GPIO as GPIO
+import time
+import sys
+
+# GPIO Pin for the LED
+LED_PIN = 18  # Change to the GPIO pin connected to your LED
+
+# Morse code dictionary
+MORSE_CODE_MAP = {
+    'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.',
+    'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---',
+    'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---',
+    'P': '.--.', 'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-',
+    'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 'Y': '-.--',
+    'Z': '--..',
+    '0': '-----', '1': '.----', '2': '..---', '3': '...--',
+    '4': '....-', '5': '.....', '6': '-....', '7': '--...',
+    '8': '---..', '9': '----.',
+    ' ': '/'  # Space between words
+}
+
+# Timing rules (in seconds)
+DOT_DURATION = 0.1
+DASH_DURATION = 0.3
+SYMBOL_SPACE = 0.1
+LETTER_SPACE = 0.3
+WORD_SPACE = 0.1
+
+def setup():
+    """Setup the GPIO pin."""
+    GPIO.setmode(GPIO.BCM)  # Use BCM GPIO numbering
+    GPIO.setup(LED_PIN, GPIO.OUT)
+
+def cleanup():
+    """Cleanup the GPIO settings."""
+    GPIO.cleanup()
+
+def blink(duration):
+    """Blink the LED for the specified duration."""
+    GPIO.output(LED_PIN, GPIO.HIGH)
+    time.sleep(duration)
+    GPIO.output(LED_PIN, GPIO.LOW)
+    time.sleep(SYMBOL_SPACE)
+
+def send_morse(message, repeat):
+    """Send the message in Morse code via the LED."""
+    for _ in range(repeat):
+        for char in message.upper():
+            if char == ' ':
+                time.sleep(WORD_SPACE)  # Space between words
+            else:
+                morse_code = MORSE_CODE_MAP.get(char, '')
+                for symbol in morse_code:
+                    if symbol == '.':
+                        blink(DOT_DURATION)
+                    elif symbol == '-':
+                        blink(DASH_DURATION)
+                time.sleep(LETTER_SPACE)  # Space between letters
+        time.sleep(WORD_SPACE)  # Space between repetitions
+
+if __name__ == "__main__":
+    if len(sys.argv) < 3:
+        print(f"Usage: {sys.argv[0]} <repeat_count> <message>")
+        sys.exit(1)
+    
+    repeat_count = int(sys.argv[1])
+    message = sys.argv[2]
+
+    try:
+        setup()
+        send_morse(message, repeat_count)
+    except KeyboardInterrupt:
+        print("\nProgram interrupted!")
+    finally:
+        cleanup()
+
