@@ -1,1 +1,25 @@
+Lab 1 - Lab Setup and trivial tests
+The overall objective of this lab is to setup the Pi4 (lab1.1), and program a couple of simple ESP32 programs using the Pi4
+board (lab1.2 and lab1.3). This requires having a WIFI setup (eduroam works) in the Pi4.
 
+Lab 2 - Debugging and Humidity and Temperature
+The overall objective of this lab is to use GDB and interface with a RISC-V executable, and to implement a humidity/temperature
+sensor.
+
+Lab 3 - Display Humidity and Temperature
+The overall objective of this task is to develop a new C++ library in ESP32 to control the display (I2C) and use the same I2C
+to access the temperature/humidity sensor.
+
+Lab 4 - Create a BlueTooth Mouse
+The overall objective of this task is to use the ICM-42670-P on the RUST ESP32C3 board as a Bluetooth mouse. Each time the board
+tilts, it should move the mouse in the X/Y direction accordingly. There are some specific rules on how to control the mouse and
+the test to pass.
+
+Lab 5 - Morse Code LED
+This lab is about creating some "LED" communication between the PI4 and the ESP32 board.
+
+Lab 6 - Ultrasonic Range Finder
+This lab is to program the ultrasonic range.
+
+Lab 8 - Rust Lab
+The goal of this lab is to REDO one of the previous labs with RUST. I chose to redo Lab 1.
