@@ -1,13 +1,30 @@
-Lab 1 - 
+Lab 1 - Terms and Review
+Review basic circuit laws, cell and CMOS terms.
 
-Lab 2 - 
+Lab 2 - KLayout and Spice
+Learn how to read spice netlists and draw CMOS circuits from logic statements, .gds files, and .spice files.
 
-Lab 3 - 
+Lab 3 - KLayout, DRC, LVS and Ngspice
+Learn basic skills with editing and verifying standard cell layouts. You will also gain experience running
+spice to simulation standard cells.
 
-Lab 4 - 
+Lab 4 - OpenLane2
+The goal of this assignment is to familiarize with the OpenLane2 HDL (Hardware Description Language) to GDS
+toolchain.
 
-Lab 5 - 
+Lab 5 - Static Timing Analysis
+Learn basic skills with static timing analysis (STA) including analyzing critical paths, false paths, and
+setting design constraints.
 
-Lab 6 - 
 
-Lab 7 - 
+Lab 6 - Logical Effort
+Learn basic skills with the method of logical effort.
+
+Lab 7 - PPA
+Use the OpenLane2/OpenRoad tool flow to create and improve an IBEX processor design with two banks. The IBEX
+is a 32-bit RISC-V microprocessor. The RTL is provided and the configuration files must be created for the
+design. The goal of this assignment is to measure Power (dynamic and leakage), Performance (clock period or
+frequency) and Area (silicon chip size) after design "signoff" (which is post-routing and extraction) and
+passing timing in all process corners. It is expected that each design should pass DRC and LVS. After baseline,
+the design flowshould be enhanced in two different ways to improve the metrics (power, performance, area) and
+measure the impact.
