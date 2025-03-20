@@ -1,6 +1,2 @@
-#Assignment 3 directory
-
-This directory contains source code and other files for Assignment 3.
-
-Use this README document to store notes about design, testing, and
-questions you have while developing your assignment.
+This directory is empty because I kept my final files in a Multipass instance that was deleted.
+Lab 4 can be referenced for the majority of submission files for this lab.
