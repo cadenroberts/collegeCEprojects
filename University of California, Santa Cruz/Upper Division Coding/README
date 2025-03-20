@@ -16,6 +16,16 @@ random variables and transforms; independence; Bernnoulli trials. Statistics, in
 outcomes of repeated experiments; applications to design; assessment of relative frequency and probability; law of large numbers;
 precision of measurements. Elements of stochastic processes, Poisson processes; Markov chains.
 
+CSE121 - Embedded System Design
+The design and use of microprocessor-based embedded systems. Covers microprocessor and microcontroller architecture, programming
+techniques, bus and memory organization, DMA, timing issues, interrupts, peripheral devices, serial and parallel communication,
+and interfacing to analog and digital systems.
+
+CSE130 - Principals of Computer System Design
+Covers the principles governing computer-systems design and complexity; familiarity with memory, storage, and networking;
+concurrency and synchronization; layering (abstraction and modularity); naming; client-server and virtualized system models; and
+performance. Requires significant programming projects demonstrating mastery of these concepts.
+
 CSE150 - Introduction to Computer Networks
 Addresses issues arising in organizing communications among autonomous computers. Network models and conceptual layers;
 Internet-working; characteristics of transmission media; switching techniques (packet switching, circuit switching, cell switching);
