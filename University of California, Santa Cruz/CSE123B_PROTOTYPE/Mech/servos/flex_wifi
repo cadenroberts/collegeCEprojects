@@ -1,0 +1,296 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdbool.h>
+
+#include "nvs_flash.h"
+#include "esp_log.h"
+#include "esp_system.h"
+#include "esp_event.h"
+#include "esp_netif.h"
+#include "esp_wifi.h"
+#include "esp_http_client.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "freertos/semphr.h"
+
+#include "driver/gpio.h"
+#include "driver/ledc.h"
+#include "driver/adc.h"
+#include "cJSON.h"
+
+// === CONFIGURATIONS ===
+#define WIFI_SSID               "Jho"
+#define WIFI_PASS               "12345678"
+#define RUNNER_URL              "https://therahand.info/v0/runner"
+#define MAX_HTTP_OUTPUT_BUFFER  8192
+
+// (certificate truncated for brevity)
+static const char isrg_root_x1_pem[] = "-----BEGIN CERTIFICATE-----\n"
+    "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\n"
+    "-----END CERTIFICATE-----\n";
+
+static const char *TAG = "therahand";
+static SemaphoreHandle_t wifi_semaphore = NULL;
+static const char *REQUEST_URL = "https://therahand.info/v0/runner";
+
+adc1_channel_t flex_channels[SENSOR_COUNT] = {
+    ADC1_CHANNEL_0, // GPIO36
+    ADC1_CHANNEL_1, // GPIO37
+    ADC1_CHANNEL_2, // GPIO38
+    ADC1_CHANNEL_3, // GPIO39
+    ADC1_CHANNEL_4  // GPIO32
+};
+
+uint8_t result_flex_percent[MAX_RESULT_SAMPLES][SENSOR_COUNT];
+int result_sample_count = 0;
+
+extern const uint8_t server_cert_pem_start[] asm("_binary_server_cert_pem_start");
+extern const uint8_t server_cert_pem_end[] asm("_binary_server_cert_pem_end");
+
+void wifi_init(void);
+void http_runner_task(void *pvParameters);
+void execute_servo_motion(uint32_t duration_ms, float flex_target);
+float get_flex_percent(adc1_channel_t channel);
+void set_durations_for_value(float value, uint32_t *out_down, uint32_t *out_up);
+
+void app_main(void) {
+    esp_err_t ret = nvs_flash_init();
+    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+        ESP_ERROR_CHECK(nvs_flash_erase());
+        ESP_ERROR_CHECK(nvs_flash_init());
+    }
+
+    ESP_ERROR_CHECK(esp_netif_init());
+    ESP_ERROR_CHECK(esp_event_loop_create_default());
+
+    wifi_init();
+
+    wifi_semaphore = xSemaphoreCreateBinary();
+    xTaskCreate(&http_runner_task, "http_runner_task", 8192, NULL, 5, NULL);
+
+    // ADC config
+    adc1_config_width(ADC_WIDTH_BIT_12);
+    for (int i = 0; i < SENSOR_COUNT; i++) {
+        adc1_config_channel_atten(flex_channels[i], ADC_ATTEN_DB_11);
+    }
+
+    // LEDC config
+    ledc_timer_config_t ledc_timer = {
+        .speed_mode = LEDC_LOW_SPEED_MODE,
+        .timer_num = SERVO_PWM_TIMER,
+        .duty_resolution = SERVO_PWM_RES,
+        .freq_hz = SERVO_PWM_FREQ,
+        .clk_cfg = LEDC_AUTO_CLK
+    };
+    ledc_timer_config(&ledc_timer);
+}
+
+void http_runner_task(void *pvParameters) {
+    while (1) {
+        esp_http_client_config_t config = {
+            .url = REQUEST_URL,
+            .cert_pem = (char *)server_cert_pem_start,
+        };
+        esp_http_client_handle_t client = esp_http_client_init(&config);
+
+        if (!client) {
+            ESP_LOGE(TAG, "Failed to init HTTP client");
+            vTaskDelay(pdMS_TO_TICKS(5000));
+            continue;
+        }
+
+        esp_http_client_set_method(client, HTTP_METHOD_GET);
+        esp_http_client_set_header(client, "device-id", DEVICE_ID);
+
+        esp_err_t err = esp_http_client_perform(client);
+        if (err != ESP_OK) {
+            ESP_LOGE(TAG, "HTTP GET request failed: %s", esp_err_to_name(err));
+            esp_http_client_cleanup(client);
+            vTaskDelay(pdMS_TO_TICKS(5000));
+            continue;
+        }
+
+        int status = esp_http_client_get_status_code(client);
+        ESP_LOGI(TAG, "GET status = %d", status);
+
+        if (status == 200) {
+            char buffer[MAX_HTTP_RECV_BUFFER];
+            int data_len = esp_http_client_read(client, buffer, sizeof(buffer) - 1);
+            if (data_len < 0) {
+                ESP_LOGE(TAG, "Failed to read HTTP response");
+                esp_http_client_cleanup(client);
+                vTaskDelay(pdMS_TO_TICKS(5000));
+                continue;
+            }
+            buffer[data_len] = 0;
+
+            ESP_LOGI(TAG, "Response: %s", buffer);
+            cJSON *root = cJSON_Parse(buffer);
+            if (!root) {
+                ESP_LOGE(TAG, "Failed to parse JSON");
+                esp_http_client_cleanup(client);
+                vTaskDelay(pdMS_TO_TICKS(5000));
+                continue;
+            }
+
+            cJSON *id = cJSON_GetObjectItem(root, "id");
+            cJSON *flexion = cJSON_GetObjectItem(root, "flexion");
+
+            if (cJSON_IsNumber(id) && cJSON_IsNumber(flexion)) {
+                // Perform motion
+                uint32_t down_ms, up_ms;
+                set_durations_for_value(flexion->valuedouble, &down_ms, &up_ms);
+                execute_servo_motion(down_ms, flexion->valuedouble);
+                execute_servo_motion(up_ms, 0);
+
+                // Prepare result JSON
+                cJSON *json_root = cJSON_CreateObject();
+                cJSON_AddStringToObject(json_root, "device_id", DEVICE_ID);
+                cJSON_AddNumberToObject(json_root, "runner_id", id->valueint);
+                cJSON *result_array = cJSON_AddArrayToObject(json_root, "result");
+
+                for (int i = 0; i < result_sample_count; i++) {
+                    cJSON *sample = cJSON_CreateIntArray(result_flex_percent[i], SENSOR_COUNT);
+                    cJSON_AddItemToArray(result_array, sample);
+                }
+
+                char *post_data = cJSON_PrintUnformatted(json_root);
+
+                // POST result
+                esp_http_client_set_url(client, REQUEST_URL);
+                esp_http_client_set_method(client, HTTP_METHOD_POST);
+                esp_http_client_set_header(client, "Content-Type", "application/json");
+                esp_http_client_set_post_field(client, post_data, strlen(post_data));
+
+                err = esp_http_client_perform(client);
+                if (err == ESP_OK) {
+                    int post_status = esp_http_client_get_status_code(client);
+                    ESP_LOGI(TAG, "POST status = %d", post_status);
+                } else {
+                    ESP_LOGE(TAG, "POST failed: %s", esp_err_to_name(err));
+                }
+
+                cJSON_Delete(json_root);
+                free(post_data);
+            } else {
+                // Unknown or incomplete response, send DELETE
+                esp_http_client_set_method(client, HTTP_METHOD_DELETE);
+                esp_err_t del_err = esp_http_client_perform(client);
+                if (del_err == ESP_OK) {
+                    ESP_LOGW(TAG, "Sent DELETE due to unknown ID or flexion");
+                } else {
+                    ESP_LOGE(TAG, "DELETE failed: %s", esp_err_to_name(del_err));
+                }
+            }
+            cJSON_Delete(root);
+        }
+
+        esp_http_client_cleanup(client);
+        vTaskDelay(pdMS_TO_TICKS(5000));
+    }
+}
+
+
+float get_flex_percent(adc1_channel_t channel) {
+    int samples[FLEX_SAMPLE_COUNT];
+    float sum = 0;
+
+    for (int i = 0; i < FLEX_SAMPLE_COUNT; i++) {
+        samples[i] = adc1_get_raw(channel);
+        sum += samples[i];
+    }
+
+    float mean = sum / FLEX_SAMPLE_COUNT;
+
+    float variance = 0;
+    for (int i = 0; i < FLEX_SAMPLE_COUNT; i++) {
+        float diff = samples[i] - mean;
+        variance += diff * diff;
+    }
+
+    float stddev = sqrtf(variance / FLEX_SAMPLE_COUNT);
+
+    float filtered_sum = 0;
+    int filtered_count = 0;
+    for (int i = 0; i < FLEX_SAMPLE_COUNT; i++) {
+        if (fabsf(samples[i] - mean) <= stddev) {
+            filtered_sum += samples[i];
+            filtered_count++;
+        }
+    }
+
+    float avg = (filtered_count > 0) ? filtered_sum / filtered_count : mean;
+    float percent = ((avg - MIN_ADC_VALUE) * 100.0f) / (MAX_ADC_VALUE - MIN_ADC_VALUE);
+
+    if (percent < 0) percent = 0;
+    if (percent > 100) percent = 100;
+    return percent;
+}
+
+void execute_servo_motion(uint32_t duration_ms, float flex_target) {
+    result_sample_count = 0;
+
+    uint32_t min_duty = 327;
+    uint32_t max_duty = 655;
+    uint32_t target_duty = min_duty + (uint32_t)((flex_target / 100.0f) * (max_duty - min_duty));
+
+    ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, target_duty);
+    ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
+    ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_1, target_duty);
+    ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_1);
+
+    uint32_t start = xTaskGetTickCount() * portTICK_PERIOD_MS;
+    while ((xTaskGetTickCount() * portTICK_PERIOD_MS - start) < duration_ms) {
+        if (gpio_get_level(BOOT_BTN_GPIO) == 0) break;
+
+        if (result_sample_count < MAX_RESULT_SAMPLES) {
+            for (int i = 0; i < SENSOR_COUNT; i++) {
+                result_flex_percent[result_sample_count][i] = get_flex_percent(flex_channels[i]);
+            }
+            result_sample_count++;
+        }
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+
+    ledc_stop(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, 0);
+    ledc_stop(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_1, 0);
+}
+
+void set_durations_for_value(float value, uint32_t *out_down, uint32_t *out_up) {
+    if (value < 0) value = 0;
+    if (value > 100) value = 100;
+
+    *out_down = 500 + (uint32_t)(value * 20);  // 500ms to 2500ms
+    *out_up = 500; // Constant passive open duration
+}
+

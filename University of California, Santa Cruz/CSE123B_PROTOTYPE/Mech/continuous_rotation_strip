@@ -1,0 +1,179 @@
+#include <stdio.h>
+#include <math.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "driver/gpio.h"
+#include "driver/ledc.h"
+#include "driver/adc.h"
+#include "esp_timer.h"
+#include "esp_log.h"
+
+#define SERVO1_GPIO       5
+#define SERVO2_GPIO       7
+#define SERVO_PWM_FREQ    50
+#define SERVO_PWM_RES     LEDC_TIMER_13_BIT
+#define SERVO1_CHANNEL    LEDC_CHANNEL_0
+#define SERVO2_CHANNEL    LEDC_CHANNEL_1
+#define SERVO_NEUTRAL_MS  1.5f
+#define SERVO_MOVE_MS     1.65f
+
+#define BOOT_BTN_GPIO     9
+
+#define SENSOR_COUNT      5
+#define CALIB_SAMPLES     10
+#define SAMPLE_COUNT      10
+#define SAMPLE_INTERVAL_MS 50
+#define MIN_VOLTAGE       0.25f  // nominal sensor threshold
+#define MAX_VOLTAGE       1.2f   // max expected sensor output
+
+static const adc1_channel_t flex_channels[SENSOR_COUNT] = {
+    ADC1_CHANNEL_0,  // GPIO36
+    ADC1_CHANNEL_1,  // GPIO37
+    ADC1_CHANNEL_2,  // GPIO38
+    ADC1_CHANNEL_3,  // GPIO39
+    ADC1_CHANNEL_4   // GPIO32
+};
+
+uint32_t ms_to_duty(float ms) {
+    float percent = (ms / 20.0f) * 100.0f;
+    return (uint32_t)((percent / 100.0f) * ((1 << 13) - 1));
+}
+
+void setup_servo(int gpio, ledc_channel_t channel) {
+    ledc_channel_config_t channel_conf = {
+        .gpio_num   = gpio,
+        .speed_mode = LEDC_LOW_SPEED_MODE,
+        .channel    = channel,
+        .timer_sel  = LEDC_TIMER_0,
+        .duty       = 0,
+        .hpoint     = 0
+    };
+    ledc_channel_config(&channel_conf);
+}
+
+void set_servo_pulse(ledc_channel_t channel, float pulse_ms) {
+    ledc_set_duty(LEDC_LOW_SPEED_MODE, channel, ms_to_duty(pulse_ms));
+    ledc_update_duty(LEDC_LOW_SPEED_MODE, channel);
+}
+
+void stop_all_servos() {
+    set_servo_pulse(SERVO1_CHANNEL, SERVO_NEUTRAL_MS);
+    set_servo_pulse(SERVO2_CHANNEL, SERVO_NEUTRAL_MS);
+    ledc_stop(LEDC_LOW_SPEED_MODE, SERVO1_CHANNEL, 0);
+    ledc_stop(LEDC_LOW_SPEED_MODE, SERVO2_CHANNEL, 0);
+}
+
+bool boot_button_pressed() {
+    return gpio_get_level(BOOT_BTN_GPIO) == 0;
+}
+
+void app_main(void) {
+    // --- Initialize BOOT button ---
+    gpio_config_t io_conf = {
+        .pin_bit_mask = (1ULL << BOOT_BTN_GPIO),
+        .mode = GPIO_MODE_INPUT,
+        .pull_up_en = GPIO_PULLUP_ENABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_DISABLE
+    };
+    gpio_config(&io_conf);
+
+    // --- Initialize LEDC timer & servos ---
+    ledc_timer_config_t timer_conf = {
+        .speed_mode       = LEDC_LOW_SPEED_MODE,
+        .duty_resolution  = SERVO_PWM_RES,
+        .timer_num        = LEDC_TIMER_0,
+        .freq_hz          = SERVO_PWM_FREQ,
+        .clk_cfg          = LEDC_AUTO_CLK
+    };
+    ledc_timer_config(&timer_conf);
+    setup_servo(SERVO1_GPIO, SERVO1_CHANNEL);
+    setup_servo(SERVO2_GPIO, SERVO2_CHANNEL);
+
+    // --- Initialize ADC ---
+    adc1_config_width(ADC_WIDTH_BIT_12);
+    for (int i = 0; i < SENSOR_COUNT; i++) {
+        adc1_config_channel_atten(flex_channels[i], ADC_ATTEN_DB_11);
+    }
+
+    // --- Baseline calibration ---
+    float baseline[SENSOR_COUNT] = {0};
+    for (int s = 0; s < SENSOR_COUNT; s++) {
+        float sum = 0;
+        for (int n = 0; n < CALIB_SAMPLES; n++) {
+            int raw = adc1_get_raw(flex_channels[s]);
+            float voltage = (raw / 4095.0f) * 3.3f;
+            sum += voltage;
+            vTaskDelay(pdMS_TO_TICKS(SAMPLE_INTERVAL_MS));
+        }
+        baseline[s] = sum / CALIB_SAMPLES;
+        ESP_LOGI("CALIB", "Sensor %d baseline: %.3f V", s, baseline[s]);
+    }
+
+    // --- Main loop ---
+    float readings[SENSOR_COUNT][SAMPLE_COUNT] = {0};
+    int sample_index = 0;
+    while (true) {
+        if (boot_button_pressed()) {
+            ESP_LOGI("SYSTEM", "BOOT pressed — stopping.");
+            break;
+        }
+
+        // Move servo forward
+        set_servo_pulse(SERVO1_CHANNEL, SERVO_MOVE_MS);
+        set_servo_pulse(SERVO2_CHANNEL, SERVO_MOVE_MS);
+        vTaskDelay(pdMS_TO_TICKS(500));
+
+        // Sample flex sensors during motion
+        int loops = 500 / SAMPLE_INTERVAL_MS;
+        for (int l = 0; l < loops; l++) {
+            for (int s = 0; s < SENSOR_COUNT; s++) {
+                int raw = adc1_get_raw(flex_channels[s]);
+                float voltage = (raw / 4095.0f) * 3.3f;
+                readings[s][sample_index] = voltage;
+                vTaskDelay(pdMS_TO_TICKS(1)); // reduce ADC crosstalk
+            }
+            sample_index++;
+            if (sample_index >= SAMPLE_COUNT) {
+                // Process each sensor
+                for (int s = 0; s < SENSOR_COUNT; s++) {
+                    // compute mean and std dev
+                    float sum = 0;
+                    for (int j = 0; j < SAMPLE_COUNT; j++) sum += readings[s][j];
+                    float mean = sum / SAMPLE_COUNT;
+                    float var = 0;
+                    for (int j = 0; j < SAMPLE_COUNT; j++) {
+                        var += powf(readings[s][j] - mean, 2);
+                    }
+                    float std_dev = sqrtf(var / SAMPLE_COUNT);
+                    // filter outliers
+                    float fsum = 0; int cnt = 0;
+                    for (int j = 0; j < SAMPLE_COUNT; j++) {
+                        if (fabsf(readings[s][j] - mean) <= std_dev) {
+                            fsum += readings[s][j]; cnt++;
+                        }
+                    }
+                    float avg = cnt ? fsum / cnt : mean;
+                    // compute percent from baseline
+                    float range = MAX_VOLTAGE - baseline[s];
+                    float pct = range > 0 ? ((avg - baseline[s]) / range) * 100.0f : 0;
+                    if (pct < 0) pct = 0;
+                    if (pct > 100) pct = 100;
+                    ESP_LOGI("FLEX", "Sensor %d | Flex: %.1f%%", s, pct);
+                }
+                sample_index = 0;
+            }
+            vTaskDelay(pdMS_TO_TICKS(SAMPLE_INTERVAL_MS));
+        }
+
+        if (boot_button_pressed()) break;
+
+        // Return servo to neutral
+        set_servo_pulse(SERVO1_CHANNEL, SERVO_NEUTRAL_MS);
+        set_servo_pulse(SERVO2_CHANNEL, SERVO_NEUTRAL_MS);
+        vTaskDelay(pdMS_TO_TICKS(500));
+    }
+
+    stop_all_servos();
+    ESP_LOGI("SYSTEM", "Session ended.");
+}

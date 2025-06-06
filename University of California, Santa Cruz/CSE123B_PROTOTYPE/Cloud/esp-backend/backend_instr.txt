@@ -1,0 +1,56 @@
+##ENTER DB:
+docker exec -it thera-hand-backend psql -U postgres
+
+#Check DB:
+\c
+    you'll want to see postgres
+
+#LIST ALL TABLES:
+\dt
+
+#FIND ALL USERS:
+SELECT id, data->>'email' AS email, data->>'name' AS name, role FROM users;
+
+#FIND USER BY EMAIL:
+SELECT id, data->>'email', data->>'name', role FROM users WHERE data->>'email' = 'aliyaa@therahand.com';
+
+#LIST ALL PATIENTS:
+SELECT * FROM patients;
+
+#SHOW ALL SESSIONS
+SELECT * FROM sessions;
+
+#FIND SESSIONS FOR A SPECIFIC PATIENT:
+ex: aliyaa
+
+Find patient ID:
+SELECT id FROM users WHERE data->>'email' = 'aliyaa@therahand.com';
+
+Then:
+SELECT * FROM sessions WHERE patient_id = '40eadfea-280e-463a-9e58-cc6137d1d7d4';
+
+#SEE LATEST SESSION:
+SELECT * FROM sessions ORDER BY created_at DESC LIMIT 1;
+
+##DELETING DATA:
+
+Delete a specific session by ID:
+DELETE FROM sessions WHERE id = '188b62fd-eaac-46f2-bbd7-103f5c73c6ac'; (delete just that session)
+
+Delete all sessions for a specific patient:
+DELETE FROM sessions WHERE patient_id = '40eadfea-280e-463a-9e58-cc6137d1d7d4'; (deletes all of aliyaa's sessions)
+
+Delete a USER:
+DELETE FROM users WHERE data->>'email' = 'aliyaa@therahand.com';
+    deletes user record
+
+Delete EVERYTHING IN SESSIONS:
+DELETE FROM sessions;
+
+##Exit Postgres:
+\q
+
+\dt	List all tables
+\d sessions	Show schema for the sessions table
+\c	Show current database
+\q	Quit

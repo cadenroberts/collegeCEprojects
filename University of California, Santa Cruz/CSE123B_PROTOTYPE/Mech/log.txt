@@ -1,0 +1,225 @@
+Executing action: flash
+Running ninja in directory /home/alnislam/esp/continuous_rotation_strip/build
+Executing "ninja flash"...
+[1/5] cd /home/alnislam/esp/continuous_rotation_strip/build/esp-idf/esptool_py && /home/alnislam/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/alnislam/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/alnislam/esp/continuous_rotation_strip/build/partition_table/partition-table.bin /home/alnislam/esp/continuous_rotation_strip/build/continuous_rotation_strip.bin
+continuous_rotation_strip.bin binary size 0x31890 bytes. Smallest app partition is 0x100000 bytes. 0xce770 bytes (81%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/alnislam/esp/continuous_rotation_strip/build/bootloader/esp-idf/esptool_py && /home/alnislam/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/alnislam/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/alnislam/esp/continuous_rotation_strip/build/bootloader/bootloader.bin
+Bootloader binary size 0x53d0 bytes. 0x2c30 bytes (35%) free.
+[2/3] cd /home/alnislam/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/alnislam/esp/esp-idf -D "SERIAL_TOOL=/home/alnislam/.espressif/python_env/idf5.4_py3.10_env/bin/python;;/home/alnislam/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/alnislam/esp/continuous_rotation_strip/build -P /home/alnislam/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c3 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 continuous_rotation_strip.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/ttyACM0
+Connecting...
+Chip is ESP32-C3 (QFN32) (revision v0.4)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC)
+Crystal is 40MHz
+MAC: 34:85:18:01:b4:24
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00041fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21456 bytes to 13057...
+Writing at 0x00000000... (100 %)
+Wrote 21456 bytes (13057 compressed) at 0x00000000 in 0.4 seconds (effective 424.8 kbit/s)...
+Hash of data verified.
+Compressed 202896 bytes to 105308...
+Writing at 0x00010000... (14 %)
+Writing at 0x0001b3fa... (28 %)
+Writing at 0x0002181c... (42 %)
+Writing at 0x00028837... (57 %)
+Writing at 0x0003068a... (71 %)
+Writing at 0x000371d4... (85 %)
+Writing at 0x0003e317... (100 %)
+Wrote 202896 bytes (105308 compressed) at 0x00010000 in 1.8 seconds (effective 917.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 412.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+Executing action: monitor
+Running idf_monitor in directory /home/alnislam/esp/continuous_rotation_strip
+Executing "/home/alnislam/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/alnislam/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/alnislam/esp/continuous_rotation_strip/build/continuous_rotation_strip.elf -m '/home/alnislam/.espressif/python_env/idf5.4_py3.10_env/bin/python' '/home/alnislam/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'"...
+[0;32mI (297) sleep_gpio: EnaESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4004c0dc
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1824
+load:0x403cc710,len:0xc30
+load:0x403ce710,len:0x2f20
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.4-dev-3489-g6e5a178b31-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time May  8 2025 14:54:37[0m
+[0;32mI (26) boot: chip revision: v0.4[0m
+[0;32mI (29) boot: efuse block revision: v1.2[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=09f9ch ( 40860) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=00019fc4 vaddr=3fc8ba00 size=013c8h (  5064) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001b394 vaddr=40380000 size=04c84h ( 19588) load[0m
+[0;32mI (120) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1abe8h (109544) map[0m
+[0;32mI (142) esp_image: segment 4: paddr=0003ac10 vaddr=40384c84 size=06c3ch ( 27708) load[0m
+[0;32mI (147) esp_image: segment 5: paddr=00041854 vaddr=50000200 size=00018h (    24) load[0m
+[0;32mI (151) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (154) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Unicore app[0m
+[0;32mI (179) cpu_start: Pro cpu start user code[0m
+[0;32mI (179) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (179) app_init: Application information:[0m
+[0;32mI (182) app_init: Project name:     continuous_rotation_strip[0m
+[0;32mI (189) app_init: App version:      1[0m
+[0;32mI (193) app_init: Compile time:     May  8 2025 14:54:16[0m
+[0;32mI (199) app_init: ELF file SHA256:  48f606c36...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.4-dev-3489-g6e5a178b31-dirty[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (216) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (221) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (226) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (233) heap_init: At 3FC8DD00 len 00032300 (200 KiB): RAM[0m
+[0;32mI (239) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (246) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (253) heap_init: At 50000218 len 00001DD0 (7 KiB): RTCRAM[0m
+[0;32mI (260) spi_flash: detected chip: generic[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (281) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (289) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (297) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (304) main_task: Calling app_main()[0m
+[0;32mI (304) gpio: GPIO[9]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (314) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (324) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (334) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (344) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (864) CALIB: Sensor 0 baseline: 0.809 V[0m
+[0;32mI (1364) CALIB: Sensor 1 baseline: 0.458 V[0m
+[0;32mI (1864) CALIB: Sensor 2 baseline: 0.277 V[0m
+[0;32mI (2364) CALIB: Sensor 3 baseline: 0.693 V[0m
+[0;32mI (2864) CALIB: Sensor 4 baseline: 0.318 V[0m
+[0;32mI (3814) FLEX: Sensor 0 | Flex: 0.0%[0m
+[0;32mI (3814) FLEX: Sensor 1 | Flex: 0.0%[0m
+[0;32mI (3814) FLEX: Sensor 2 | Flex: 0.0%[0m
+[0;32mI (3814) FLEX: Sensor 3 | Flex: 0.0%[0m
+[0;32mI (3814) FLEX: Sensor 4 | Flex: 0.0%[0m
+[0;32mI (5324) FLEX: Sensor 0 | Flex: 0.0%[0m
+[0;32mI (5324) FLEX: Sensor 1 | Flex: 0.0%[0m
+[0;32mI (5324) FLEX: Sensor 2 | Flex: 0.0%[0m
+[0;32mI (5324) FLEX: Sensor 3 | Flex: 0.0%[0m
+[0;32mI (5324) FLEX: Sensor 4 | Flex: 0.0%[0m
+[0;32mI (6834) FLEX: Sensor 0 | Flex: 42.5%[0m
+[0;32mI (6834) FLEX: Sensor 1 | Flex: 0.0%[0m
+[0;32mI (6834) FLEX: Sensor 2 | Flex: 0.0%[0m
+[0;32mI (6834) FLEX: Sensor 3 | Flex: 0.0%[0m
+[0;32mI (6834) FLEX: Sensor 4 | Flex: 0.0%[0m
+[0;32mI (8344) FLEX: Sensor 0 | Flex: 49.9%[0m
+[0;32mI (8344) FLEX: Sensor 1 | Flex: 0.1%[0m
+[0;32mI (8344) FLEX: Sensor 2 | Flex: 0.0%[0m
+[0;32mI (8344) FLEX: Sensor 3 | Flex: 0.0%[0m
+[0;32mI (8344) FLEX: Sensor 4 | Flex: 0.0%[0m
+[0;32mI (9854) FLEX: Sensor 0 | Flex: 49.7%[0m
+[0;32mI (9854) FLEX: Sensor 1 | Flex: 13.4%[0m
+[0;32mI (9854) FLEX: Sensor 2 | Flex: 0.0%[0m
+[0;32mI (9854) FLEX: Sensor 3 | Flex: 0.0%[0m
+[0;32mI (9854) FLEX: Sensor 4 | Flex: 0.0%[0m
+[0;32mI (11364) FLEX: Sensor 0 | Flex: 49.5%[0m
+[0;32mI (11364) FLEX: Sensor 1 | Flex: 19.8%[0m
+[0;32mI (11364) FLEX: Sensor 2 | Flex: 0.0%[0m
+[0;32mI (11364) FLEX: Sensor 3 | Flex: 0.1%[0m
+[0;32mI (11364) FLEX: Sensor 4 | Flex: 0.0%[0m
+[0;32mI (12874) FLEX: Sensor 0 | Flex: 49.0%[0m
+[0;32mI (12874) FLEX: Sensor 1 | Flex: 21.3%[0m
+[0;32mI (12874) FLEX: Sensor 2 | Flex: 15.1%[0m
+[0;32mI (12874) FLEX: Sensor 3 | Flex: 0.0%[0m
+[0;32mI (12874) FLEX: Sensor 4 | Flex: 0.0%[0m
+[0;32mI (14384) FLEX: Sensor 0 | Flex: 48.7%[0m
+[0;32mI (14384) FLEX: Sensor 1 | Flex: 21.2%[0m
+[0;32mI (14384) FLEX: Sensor 2 | Flex: 45.2%[0m
+[0;32mI (14384) FLEX: Sensor 3 | Flex: 0.0%[0m
+[0;32mI (14384) FLEX: Sensor 4 | Flex: 0.0%[0m
+[0;32mI (15894) FLEX: Sensor 0 | Flex: 48.5%[0m
+[0;32mI (15894) FLEX: Sensor 1 | Flex: 21.2%[0m
+[0;32mI (15894) FLEX: Sensor 2 | Flex: 46.2%[0m
+[0;32mI (15894) FLEX: Sensor 3 | Flex: 17.4%[0m
+[0;32mI (15894) FLEX: Sensor 4 | Flex: 0.0%[0m
+[0;32mI (17404) FLEX: Sensor 0 | Flex: 46.7%[0m
+[0;32mI (17404) FLEX: Sensor 1 | Flex: 21.2%[0m
+[0;32mI (17404) FLEX: Sensor 2 | Flex: 45.2%[0m
+[0;32mI (17404) FLEX: Sensor 3 | Flex: 39.4%[0m
+[0;32mI (17404) FLEX: Sensor 4 | Flex: 0.0%[0m
+[0;32mI (18914) FLEX: Sensor 0 | Flex: 47.4%[0m
+[0;32mI (18914) FLEX: Sensor 1 | Flex: 21.2%[0m
+[0;32mI (18914) FLEX: Sensor 2 | Flex: 44.8%[0m
+[0;32mI (18914) FLEX: Sensor 3 | Flex: 41.9%[0m
+[0;32mI (18914) FLEX: Sensor 4 | Flex: 6.0%[0m
+[0;32mI (20424) FLEX: Sensor 0 | Flex: 46.9%[0m
+[0;32mI (20424) FLEX: Sensor 1 | Flex: 21.2%[0m
+[0;32mI (20424) FLEX: Sensor 2 | Flex: 44.7%[0m
+[0;32mI (20424) FLEX: Sensor 3 | Flex: 43.3%[0m
+[0;32mI (20424) FLEX: Sensor 4 | Flex: 15.8%[0m
+[0;32mI (21934) FLEX: Sensor 0 | Flex: 46.6%[0m
+[0;32mI (21934) FLEX: Sensor 1 | Flex: 21.2%[0m
+[0;32mI (21934) FLEX: Sensor 2 | Flex: 44.8%[0m
+[0;32mI (21934) FLEX: Sensor 3 | Flex: 42.8%[0m
+[0;32mI (21934) FLEX: Sensor 4 | Flex: 19.3%[0m
+[0;32mI (23444) FLEX: Sensor 0 | Flex: 0.0%[0m
+[0;32mI (23444) FLEX: Sensor 1 | Flex: 21.2%[0m
+[0;32mI (23444) FLEX: Sensor 2 | Flex: 43.7%[0m
+[0;32mI (23444) FLEX: Sensor 3 | Flex: 43.0%[0m
+[0;32mI (23444) FLEX: Sensor 4 | Flex: 17.8%[0m
+[0;32mI (24954) FLEX: Sensor 0 | Flex: 2.8%[0m
+[0;32mI (24954) FLEX: Sensor 1 | Flex: 0.0%[0m
+[0;32mI (24954) FLEX: Sensor 2 | Flex: 43.6%[0m
+[0;32mI (24954) FLEX: Sensor 3 | Flex: 43.0%[0m
+[0;32mI (24954) FLEX: Sensor 4 | Flex: 17.7%[0m
+[0;32mI (26464) FLEX: Sensor 0 | Flex: 7.2%[0m
+[0;32mI (26464) FLEX: Sensor 1 | Flex: 0.0%[0m
+[0;32mI (26464) FLEX: Sensor 2 | Flex: 3.3%[0m
+[0;32mI (26464) FLEX: Sensor 3 | Flex: 42.8%[0m
+[0;32mI (26464) FLEX: Sensor 4 | Flex: 17.5%[0m
+[0;32mI (27974) FLEX: Sensor 0 | Flex: 10.1%[0m
+[0;32mI (27974) FLEX: Sensor 1 | Flex: 0.0%[0m
+[0;32mI (27974) FLEX: Sensor 2 | Flex: 1.6%[0m
+[0;32mI (27974) FLEX: Sensor 3 | Flex: 2.7%[0m
+[0;32mI (27974) FLEX: Sensor 4 | Flex: 17.3%[0m
+[0;32mI (29484) FLEX: Sensor 0 | Flex: 12.6%[0m
+[0;32mI (29484) FLEX: Sensor 1 | Flex: 0.0%[0m
+[0;32mI (29484) FLEX: Sensor 2 | Flex: 0.0%[0m
+[0;32mI (29484) FLEX: Sensor 3 | Flex: 7.8%[0m
+[0;32mI (29484) FLEX: Sensor 4 | Flex: 0.0%[0m
+[0;32mI (30994) FLEX: Sensor 0 | Flex: 12.9%[0m
+[0;32mI (30994) FLEX: Sensor 1 | Flex: 0.0%[0m
+[0;32mI (30994) FLEX: Sensor 2 | Flex: 0.1%[0m
+[0;32mI (30994) FLEX: Sensor 3 | Flex: 9.5%[0m
+[0;32mI (30994) FLEX: Sensor 4 | Flex: 0.0%[0m
+[0;32mI (32504) FLEX: Sensor 0 | Flex: 13.5%[0m
+[0;32mI (32504) FLEX: Sensor 1 | Flex: 0.0%[0m
+[0;32mI (32504) FLEX: Sensor 2 | Flex: 0.0%[0m
+[0;32mI (32504) FLEX: Sensor 3 | Flex: 9.7%[0m
+[0;32mI (32504) FLEX: Sensor 4 | Flex: 0.0%[0m
+[0;32mI (34014) FLEX: Sensor 0 | Flex: 13.6%[0m
+[0;32mI (34014) FLEX: Sensor 1 | Flex: 0.0%[0m
+[0;32mI (34014) FLEX: Sensor 2 | Flex: 0.0%[0m
+[0;32mI (34014) FLEX: Sensor 3 | Flex: 10.1%[0m
+[0;32mI (34014) FLEX: Sensor 4 | Flex: 0.1%[0m
+Done

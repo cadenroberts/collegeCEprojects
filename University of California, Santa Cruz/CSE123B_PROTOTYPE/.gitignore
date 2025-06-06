@@ -1,0 +1,28 @@
+# ESP-IDF build output
+build/
+sdkconfig.old
+Mech/sensors/build/
+Mech/flex_threshold/build/
+
+
+# VS Code config
+.vscode/
+
+# Python virtual environments
+python_env/
+*.pyc
+__pycache__/
+
+# ESP-IDF logs
+*.log
+
+# Misc
+*.bak
+*.swp
+.DS_Store
+
+# Node.js
+Thera_app/node_modules
+Thera_app/package-lock.json
+Cloud/esp-backend/node_modules
+Cloud/esp-backend/package-lock.json
