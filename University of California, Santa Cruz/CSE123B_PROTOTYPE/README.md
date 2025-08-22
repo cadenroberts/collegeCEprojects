@@ -1,19 +1,7 @@
 # Functional Prototype
 
-Your existing code has been imported, clone this repo and push changes to it.
+The above code is used for our device and UI.
 
-## What you'll be assesed on
+# Design Document
 
-### Equality of contributon
-
-- Number of commits
-- Type of change 
-    - Code, configuration, data
-- Volume of change 
-    - i.e. new/changed lines commited
-
-### Frequency of contributon
-
-- Number of commits per day
-    - Each team member should be commiting multiple times each day
-
+main.pdf
