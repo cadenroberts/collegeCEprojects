@@ -1,4 +1,4 @@
-#Thera App – CSE123B Prototype
+# Thera App – CSE123B Prototype
 
 Overview
 --------
