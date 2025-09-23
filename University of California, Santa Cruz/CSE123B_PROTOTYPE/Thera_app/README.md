@@ -21,11 +21,18 @@ Thera_app/
     schema.sql
     data.sql
   src/                React frontend and backend logic
-    server.js         Express backend entrypoint
+    App.css
+    App.jsx
+    AddDevice.jsx
+    Admin.jsx
+    CreateUser.jsx
+    HandModel.jsx
+    Home.jsx
+    ProtectedRoute.jsx
+    SignIn.jsx
     app.js            Backend app configuration
-    App.jsx, main.jsx, CSS and other components
-    ProtectedRoute.jsx, SignIn.jsx, Admin.jsx, CreateUser.jsx, AddDevice.jsx
-    HandModel.jsx     3D hand component
+    main.jsx
+    server.js         Express backend entrypoint
   public/             Static assets and 3D models
     therahand.png
     rigged_hand/...
