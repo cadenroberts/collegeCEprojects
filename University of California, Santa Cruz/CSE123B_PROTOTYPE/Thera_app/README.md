@@ -1,4 +1,4 @@
-Thera App – CSE123B Prototype
+#Thera App – CSE123B Prototype
 
 Overview
 --------
@@ -14,27 +14,43 @@ The system includes:
 Project Structure
 -----------------
 Thera_app/
+
   api/                OpenAPI spec for backend API
+  
     openapi.yaml
+    
   sql/                PostgreSQL schema and seed data
+  
     schema.sql
     data.sql
+    
   src/                React frontend and backend logic
+  
     server.js         Express backend entrypoint
     app.js            Backend app configuration
     App.jsx, main.jsx, CSS and other components
     ProtectedRoute.jsx, SignIn.jsx, Admin.jsx, CreateUser.jsx, AddDevice.jsx
     HandModel.jsx     3D hand component
+    
   public/             Static assets and 3D models
+  
     therahand.png
     rigged_hand/...
+    
   backend_instr.txt   Notes and database usage instructions
+  
   docker-compose.yml  Docker orchestration
+  
   package.json        Node dependencies
+  
   vite.config.js      Vite frontend config
+  
   PSQL.sh             Database setup helper script
+  
   PortClear.sh        Port cleanup helper
+  
   start.sh            Startup script
+  
   .env                Environment variables
 
 Setup and App Running
