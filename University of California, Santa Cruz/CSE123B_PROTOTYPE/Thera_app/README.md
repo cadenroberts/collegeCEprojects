@@ -40,7 +40,7 @@ Thera_app/
   docker-compose.yml  Docker orchestration
   package.json        Node dependencies
   vite.config.js      Vite frontend config
-  PSQL.sh             Database setup helper script
+  PSQL.sh             Database startup helper script
   PortClear.sh        Port cleanup helper
   start.sh            Startup script
   .env                Environment variables
